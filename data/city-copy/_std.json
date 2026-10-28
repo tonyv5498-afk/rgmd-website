@@ -1,0 +1,24 @@
+{
+  "steps": [
+    ["Contact & Dispatch", "Direct call. We confirm availability for your {city} address and assess the property type and damage scenario."],
+    ["Moisture Assessment", "On-site inspection with thermal imaging and moisture meters across all affected areas in your {city} property."],
+    ["Water Extraction", "Commercial extraction of all standing and absorbed water across affected surfaces."],
+    ["Material Removal", "Scope determined by moisture readings — saturated materials removed and documented."],
+    ["Drying Equipment", "Air movers and dehumidifiers placed based on moisture mapping across the full affected footprint of your {city} property."],
+    ["Daily Monitoring", "Moisture readings logged daily at every affected location in your {city} property throughout the drying process."],
+    ["Insurance Documentation", "Complete documentation package — photos, moisture logs, material inventory, and written scope organized for your carrier."],
+    ["Reconstruction Coordination", "Post-mitigation repairs coordinated to match your {city} property's original finishes and construction."],
+    ["Restored", "Moisture clearance confirmed. Full documentation on file. Your {city} property returned to pre-loss condition."]
+  ],
+  "cards": [
+    "Professional extraction, structural drying, and full documentation for all water intrusion in {city}.",
+    "Immediate commercial extraction for active flooding in {city} — dispatched promptly with appropriate equipment.",
+    "Systematic basement flood cleanup for {city} — extraction, material removal, structural drying, and documentation.",
+    "Fast sump failure response throughout {city} — extraction and complete drying for finished basements.",
+    "Professional sewage backup cleanup for {city} — containment, biohazard removal, treatment, and full documentation.",
+    "Burst and frozen pipe cleanup for {city} — extraction, hidden moisture detection, and structural drying.",
+    "Mold remediation for {city} homes and properties — containment, removal, treatment, and clearance documentation.",
+    "Fire and smoke restoration for {city} — debris removal, soot cleanup, odor elimination, and reconstruction coordination.",
+    "Post-mitigation rebuild for {city} — repairs coordinated to pre-loss condition with documentation continuity."
+  ]
+}

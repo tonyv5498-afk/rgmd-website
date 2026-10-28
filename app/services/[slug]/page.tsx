@@ -26,36 +26,38 @@ export default async function ServicePage({ params }: Props) {
   return (
     <>
       <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services/" }, { name: s.name }]} />
-      <Hero eyebrow={s.name} h1={s.h1} />
+      <Hero eyebrow={s.eyebrow} h1={s.h1} lede={s.lede} />
 
       <section className="section">
         <div className="container cols">
           <div className="prose">
             <h2>{s.h2Intro}</h2>
-            {s.intro?.length ? <Paragraphs items={s.intro} /> : <p>{s.summary}</p>}
+            <Paragraphs items={s.intro} />
           </div>
-          {s.list?.length ? (
-            <div>
-              <h3>{s.listHeading}:</h3>
-              <ul className="tick-list">{s.list.map((i) => <li key={i}>{i}</li>)}</ul>
-            </div>
-          ) : null}
+          <div>
+            <h3>{s.listHeading}:</h3>
+            <ul className="tick-list one-col">{s.list.map((i) => <li key={i}>{i}</li>)}</ul>
+          </div>
         </div>
       </section>
 
       <section className="section section-alt">
         <div className="container">
           <Eyebrow>How It Works</Eyebrow>
-          <h2>{s.slug === "water-damage-restoration" ? "Our Water Damage Restoration Process" : "Our Process"}</h2>
+          <h2>{s.processHeading ?? "Our Process"}</h2>
+          <p className="prose">{s.processIntro}</p>
           <Steps steps={s.steps} />
         </div>
       </section>
 
       <section className="section">
-        <div className="container prose">
-          <Eyebrow>Why Speed Matters</Eyebrow>
-          <h2>{s.h2Urgency}</h2>
-          <Paragraphs items={s.urgency} />
+        <div className="container cols">
+          <div className="prose">
+            <Eyebrow>{s.eyebrowUrgency ?? "Why Speed Matters"}</Eyebrow>
+            <h2>{s.h2Urgency}</h2>
+            <Paragraphs items={s.urgency} />
+          </div>
+          <ul className="local-facts">{s.urgencyList.map((i) => <li key={i}>{i}</li>)}</ul>
         </div>
       </section>
 
@@ -70,7 +72,7 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
 
-      <CtaSection heading={s.h2Cta} />
+      <CtaSection heading={s.h2Cta} text={s.ctaText} />
       <JsonLd data={[serviceSchema(s), breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Services", path: "/services/" }, { name: s.name, path: `/services/${s.slug}/` }])]} />
     </>
   );

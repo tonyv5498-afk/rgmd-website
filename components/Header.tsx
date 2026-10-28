@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { SITE } from "@/data/site";
 import { SERVICES } from "@/data/services";
@@ -19,8 +20,7 @@ export default function Header() {
       </div>
       <div className="container nav-row">
         <Link href="/" className="brand" onClick={close} aria-label={`${SITE.name} home`}>
-          {/* TODO(Tony): swap for the logo file at /public/logo.svg */}
-          <span className="brand-mark" aria-hidden="true">RG</span>
+          <Image src="/logo.png" alt="" width={60} height={60} priority className="brand-logo" />
           <span className="brand-text">Restoration Group<br />of Metro Detroit</span>
         </Link>
 

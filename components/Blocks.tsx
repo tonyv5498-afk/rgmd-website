@@ -73,11 +73,11 @@ export function ServiceCards({ slugs, headingLevel = "h3" }: { slugs?: string[];
   );
 }
 
-export function DocsSection({ heading, paragraphs }: { heading: string; paragraphs?: string[] }) {
+export function DocsSection({ heading, paragraphs, eyebrow = "Insurance Help" }: { heading: string; paragraphs?: string[]; eyebrow?: string }) {
   return (
     <section className="section section-alt">
       <div className="container">
-        <Eyebrow>Insurance Help</Eyebrow>
+        <Eyebrow>{eyebrow}</Eyebrow>
         <h2>{heading}</h2>
         <div className="prose">
           {paragraphs?.length ? <Paragraphs items={paragraphs} /> : (

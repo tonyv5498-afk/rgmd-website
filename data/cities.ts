@@ -2,8 +2,7 @@
 // match the live WordPress pages so rankings carry over. Two titles were fixed:
 // Dexter and Rockwood previously read "| Metro Detroit".
 //
-// `local` holds the city-specific details from the current pages. Long-form
-// body copy (`body`) is filled in from the WordPress export.
+// Long-form copy lives in data/city-copy/*.json (see lib/cityCopy.ts).
 
 export type County = "Wayne" | "Oakland" | "Macomb" | "Livingston" | "Washtenaw";
 
@@ -17,8 +16,6 @@ export type City = {
   description: string;
   h1: string;
   h2: { local: string; process: string; risk: string; docs: string; services: string; cta: string };
-  local: string[];
-  body?: { local?: string[]; risk?: string[]; docs?: string[] };
 };
 
 const std = (place: string) => ({
@@ -38,7 +35,6 @@ export const CITIES: City[] = [
     h2: { ...std("Ann Arbor"),
       local: "Diverse Housing Stock from Pre-War Neighborhoods to Modern University and Tech Corridor Construction",
       risk: "Aging Drain Tile, Original Plumbing, and Storm Exposure Define Ann Arbor's Restoration Risk Profile" },
-    local: ["Old West Side, Kerrytown and Water Hill pre-war craftsman and colonial homes", "Mid-century development through the 1960s and 70s", "Clay drain tile from the 1920s–40s, cast iron and galvanized plumbing in older homes", "Mature tree canopy and storm-driven roof damage", "Original hardwood, plaster walls and custom millwork"],
   },
   {
     slug: "auburn-hills", name: "Auburn Hills", place: "Auburn Hills", county: "Oakland", zips: ["48326"],
@@ -50,7 +46,6 @@ export const CITIES: City[] = [
       process: "Our Restoration Process for Auburn Hills Properties",
       risk: "Lower Auburn Hills Properties Face a Different Flooding Risk Than Standard Oakland County Sump Failures",
       docs: "Documentation for Residential, Commercial & Loft Properties" },
-    local: ["Clinton River corridor and lower-elevation neighborhoods", "Industrial loft conversions along Auburn Road", "Oak Pointe Estates and 1980s–2000s subdivisions on clay soil", "Historic downtown construction", "River flooding is treated as Category 3 water"],
   },
   {
     slug: "belleville", name: "Belleville", place: "Belleville", county: "Wayne", zips: ["48111"],
@@ -60,7 +55,6 @@ export const CITIES: City[] = [
     h2: { ...std("Belleville"),
       local: "Van Buren Township Growth Community with Mixed-Era Housing and Belleville Lake Exposure",
       risk: "Shoreline Flooding, Huron River Drainage, and Multi-Era Infrastructure Create Belleville's Distinct Water Damage Patterns" },
-    local: ["Belleville Lake frontage on the Huron River", "Historic village downtown and lake-adjacent neighborhoods", "I-94 corridor growth in Van Buren Township", "Pre-war village homes, 1960s–70s ranches and 1970s–2000s subdivisions", "NFIP flood policies on lakefront properties"],
   },
   {
     slug: "beverly-hills", name: "Beverly Hills", place: "Beverly Hills", county: "Oakland", zips: ["48025"],
@@ -72,7 +66,6 @@ export const CITIES: City[] = [
       risk: "Most Homes Have a Finished Basement — and Most Have Premium Materials",
       docs: "High-Value Residential Documentation",
       services: "Full-Service Restoration for Beverly Hills Homes" },
-    local: ["Village of under 4 square miles", "Homes built mostly 1950s–1990s with high-value finishes", "Finished basements throughout", "Ice dams and freeze-thaw cycles; mature tree canopy and gutter debris", "Street-level flooding in heavy rain"],
   },
   {
     slug: "birmingham", name: "Birmingham", place: "Birmingham", county: "Oakland", zips: ["48009"],
@@ -84,7 +77,6 @@ export const CITIES: City[] = [
       risk: "Pre-War Birmingham Homes Have Moisture Pathways That Modern Construction Simply Doesn't",
       docs: "High-Value and Historic Property Documentation",
       services: "Full-Service Restoration for Birmingham Homes & Historic Properties" },
-    local: ["1920s colonials and Tudors, including the Lincoln Street area", "Rouge River corridor and lower-elevation lots", "Old Woodward and downtown commercial and mixed-use buildings", "Newer custom builds off Maple Road", "Original plaster, cast iron and block foundations"],
   },
   {
     slug: "bloomfield-hills", name: "Bloomfield Hills", place: "Bloomfield Hills", county: "Oakland", zips: ["48301", "48302", "48303", "48304"],
@@ -98,7 +90,6 @@ export const CITIES: City[] = [
       docs: "Documentation for High-Value Carriers in Bloomfield Hills",
       services: "Restoration Services Available in Bloomfield Hills",
       cta: "Dealing With Property Damage in Bloomfield Hills?" },
-    local: ["Estates and custom homes built about 1930–1980", "Wing Lake, Long Lake and Forest Lake properties", "Cranbrook corridor; Lahser, Quarton and Long Lake roads", "Stone and plaster construction, walk-out lower levels, pre-1960 crawlspaces", "Carriage houses and pool houses with pipe-freeze exposure"],
   },
   {
     slug: "brighton", name: "Brighton", place: "Brighton", county: "Livingston", zips: ["48114", "48116"],
@@ -110,7 +101,6 @@ export const CITIES: City[] = [
       risk: "Brighton Is the Hub of an Underserved Restoration Market",
       docs: "Livingston County Residential and Commercial Documentation",
       services: "Full-Service Restoration for Brighton City & Township Properties" },
-    local: ["Historic downtown along Grand River Avenue", "Brighton Lake and the Mill Pond area", "Early-1900s Victorian and Craftsman homes", "Mid-century ranches and 1990s–2010s Brighton Township subdivisions", "Seasonal high water tables near the lakes"],
   },
   {
     slug: "canton", name: "Canton", place: "Canton Township", county: "Wayne", zips: ["48187", "48188"],
@@ -121,7 +111,6 @@ export const CITIES: City[] = [
       local: "Wayne County's Most Active Township Has Three Decades of Housing and a Creek Corridor",
       process: "Our Restoration Process for Canton Properties",
       risk: "Every Hour After a Water Event Changes the Scope and the Cost" },
-    local: ["Tonquish Creek corridor and lower-elevation flooding", "1970s–80s homes near Ford Road and Cherry Hill", "1980s–2000s subdivisions; newer finished basements off Beck Road", "Ice dams on colonials in established neighborhoods", "Retail corridors on Ford Road and Michigan Avenue"],
   },
   {
     slug: "dexter", name: "Dexter", place: "Dexter", county: "Washtenaw", zips: ["48130"],
@@ -131,7 +120,6 @@ export const CITIES: City[] = [
     h2: { ...std("Dexter"),
       local: "Rural-to-Suburban Transition Community with Varied Construction Era and Flood Plain Exposure",
       risk: "Huron River Proximity, Rural Infrastructure, and Storm Exposure Define Dexter's Water Damage Patterns" },
-    local: ["Huron River and Mill Creek flood plain", "19th and early-20th century village core", "Rural Dexter Township homes with septic and private wells", "1980s–2000s subdivisions and newer construction", "The 2012 Dexter tornado"],
   },
   {
     slug: "farmington-hills", name: "Farmington Hills", place: "Farmington Hills", county: "Oakland",
@@ -146,7 +134,6 @@ export const CITIES: City[] = [
       docs: "Documentation Support for Farmington Hills Insurance Claims",
       services: "Restoration Services Available in Farmington Hills",
       cta: "Need Restoration Help in Farmington Hills, MI?" },
-    local: ["Glen Orchard, Wood Creek Farms and Quaker Valley", "Drake, Halsted, Farmington and Middlebelt roads; 12 and 14 Mile", "1960s–2000s colonials and contemporaries on generous lots", "Finished basements and mature tree canopy", "Late-winter ice dams"],
   },
   {
     slug: "flat-rock", name: "Flat Rock", place: "Flat Rock", county: "Wayne", zips: ["48134"],
@@ -156,7 +143,6 @@ export const CITIES: City[] = [
     h2: { ...std("Flat Rock"),
       local: "Downriver Automotive Community with Mixed-Era Residential and Active Industrial Corridor",
       risk: "Aging Sump Systems, Huron River Exposure, and Industrial Corridor Losses Define Flat Rock's Restoration Profile" },
-    local: ["Huron River along the western edge", "Gibraltar Road industrial corridor", "Post-war ranches and cape cods, mid-century and 1980s–90s subdivisions", "Clay soil moisture retention", "Downriver storm drainage"],
   },
   {
     slug: "franklin", name: "Franklin", place: "Franklin", county: "Oakland", zips: ["48025"],
@@ -170,7 +156,6 @@ export const CITIES: City[] = [
       docs: "Historic and High-Value Property Documentation",
       services: "Full-Service Restoration for Franklin Village Homes",
       cta: "Water, Fire, Mold or Odor Damage in Franklin, MI?" },
-    local: ["Village of roughly 3,000 residents", "Pre-1940 colonials and Tudors", "Plaster walls, cast iron plumbing, block and stone foundations", "Rolling terrain, ravines and lower lots near Franklin Road", "Mature trees and ice dams"],
   },
   {
     slug: "howell", name: "Howell", place: "Howell", county: "Livingston", zips: ["48843", "48855"],
@@ -182,7 +167,6 @@ export const CITIES: City[] = [
       risk: "Fast, Reliable Response in an Underserved Market Matters More Here Than in Metro Detroit's Core",
       docs: "Livingston County Residential and Commercial Documentation",
       services: "Full-Service Restoration for Howell City & Township Properties" },
-    local: ["County seat of Livingston County", "Historic downtown built 1880s–1930s with plaster, original plumbing, stone and block foundations", "Grand River Avenue business corridor", "1980s–2010s Howell Township subdivisions"],
   },
   {
     slug: "milford", name: "Milford", place: "Milford", county: "Oakland", zips: ["48380"],
@@ -194,7 +178,6 @@ export const CITIES: City[] = [
       risk: "River-Adjacent Properties Face Flooding Conditions That Standard Mitigation Doesn't Solve",
       docs: "River Corridor and Historic Property Documentation",
       services: "Full-Service Restoration for Milford Village & Township Properties" },
-    local: ["Huron River corridor with spring-thaw and storm flooding", "Historic village center from the late 1800s and early 1900s", "Plaster walls, cast iron and stone foundations", "1990s–2000s Milford Township colonials with finished basements"],
   },
   {
     slug: "mount-clemens", name: "Mount Clemens", place: "Mount Clemens", county: "Macomb", zips: ["48043"],
@@ -204,7 +187,6 @@ export const CITIES: City[] = [
     h2: { ...std("Mount Clemens"),
       local: "Macomb County's Historic County Seat Has a River Corridor and Pre-War Housing Stock",
       risk: "River Corridor Flooding Is Different From a Failed Sump — Response Has to Reflect That" },
-    local: ["Macomb County seat", "Clinton River corridor and spring-thaw flooding", "Pre-war homes with plaster, cast iron drain lines, block and stone foundations", "Downtown business corridors", "River flooding is treated as Category 3 water"],
   },
   {
     slug: "new-boston", name: "New Boston", place: "New Boston", county: "Wayne", zips: ["48164"],
@@ -214,7 +196,6 @@ export const CITIES: City[] = [
     h2: { ...std("New Boston"),
       local: "Rural and Semi-Rural Huron Township Community with Agricultural Drainage and Floodplain Exposure",
       risk: "Agricultural Drainage, Huron River Floodplain, and Rural Infrastructure Define New Boston's Water Damage Patterns" },
-    local: ["Huron Township in southwestern Wayne County", "Huron River floodplain", "Agricultural drainage and clay soils", "Well and septic systems", "19th-century farmsteads, mid-century rural homes and newer builds"],
   },
   {
     slug: "northville", name: "Northville", place: "Northville", county: "Wayne", zips: ["48167", "48168"],
@@ -226,7 +207,6 @@ export const CITIES: City[] = [
       risk: "Pre-War Northville Construction Has Moisture Pathways That Surface Inspection Misses",
       docs: "Historic Property and Subdivision Claim Documentation",
       services: "Full-Service Restoration for Northville City & Township Properties" },
-    local: ["Old Village Victorian, Colonial Revival and Craftsman homes, 1870s–1930s", "Block and stone foundations", "1980s–2010s Northville Township subdivisions", "Seven Mile, Six Mile and Beck roads", "Ice dams in late winter"],
   },
   {
     slug: "novi", name: "Novi", place: "Novi", county: "Oakland", zips: ["48375"],
@@ -237,7 +217,6 @@ export const CITIES: City[] = [
       local: "Novi's 1990s–2010s Subdivisions Were Built Together — and They Fail Together",
       risk: "The 15-to-25-Year Service Window Is When Novi's Sump Systems Fail — and the Scope Gets Expensive Fast",
       docs: "Complete Documentation for Novi Water, Mold & Fire Losses" },
-    local: ["Subdivisions built mid-1990s to early 2010s", "Finished basements with hardwood and built-ins", "Novi Road, Beck Road and Ten Mile", "Sump systems reaching the same age at the same time", "Ice dams on colonials"],
   },
   {
     slug: "plymouth", name: "Plymouth", place: "Plymouth", county: "Wayne", zips: ["48170"],
@@ -250,7 +229,6 @@ export const CITIES: City[] = [
       risk: "Plaster, Original Hardwood, and Block Foundations Require a Different Response Than Modern Construction",
       docs: "Historic and Subdivision Claim Documentation",
       services: "Full-Service Restoration for Plymouth City & Township Properties" },
-    local: ["Old Village and downtown early-1900s homes", "Original plaster, cast iron, stone and block foundations", "1970s–2000s township subdivisions along Five Mile, Sheldon and Ann Arbor Road", "Rouge River flooding in spring thaw and storms", "Ice dams on colonials and craftsman homes"],
   },
   {
     slug: "richmond-mi", name: "Richmond", place: "Richmond", county: "Macomb", zips: ["48062"],
@@ -260,7 +238,6 @@ export const CITIES: City[] = [
     h2: { ...std("Richmond"),
       local: "Macomb County's Northern Edge — Historic Downtown and Suburban Residential Development",
       risk: "Reliable Restoration Coverage at the Edge of Metro Detroit's Service Area" },
-    local: ["Northern Macomb County", "Historic downtown with late-1800s and early-1900s homes", "1970s–2000s subdivisions", "Clay soil and open farmland with higher freeze exposure"],
   },
   {
     slug: "rochester-hills", name: "Rochester Hills", place: "Rochester Hills", county: "Oakland", zips: ["48306", "48307", "48309"],
@@ -274,7 +251,6 @@ export const CITIES: City[] = [
       docs: "Claim Support for Rochester Hills Water, Mold & Fire Losses",
       services: "Every Restoration Service Under One Roof",
       cta: "Water Damage or a Restoration Need in Rochester Hills?" },
-    local: ["Clinton River corridor and trail", "Avon, Adams, Tienken and Hamlin roads; M-59", "Stony Creek Ridge and Country Club Village", "1970s homes with crawlspaces and original copper", "1980s–2000s subdivisions with finished basements on heavy clay"],
   },
   {
     slug: "rockwood", name: "Rockwood", place: "Rockwood", county: "Wayne", zips: ["48173"],
@@ -284,7 +260,6 @@ export const CITIES: City[] = [
     h2: { ...std("Rockwood"),
       local: "Small Downriver Community with Post-War Housing Stock and Huron River Drainage Exposure",
       risk: "Aging Infrastructure and Huron River Drainage Define Rockwood's Restoration Risk Profile" },
-    local: ["Southern Downriver corridor", "1950s–60s post-war single-family homes", "Slab and crawlspace foundations", "60–70-year-old drain tile and plumbing", "Huron River outlet and marshy southern Wayne County lowlands"],
   },
   {
     slug: "shelby-township", name: "Shelby Township", place: "Shelby Township", county: "Macomb", zips: ["48315", "48316", "48317"],
@@ -294,7 +269,6 @@ export const CITIES: City[] = [
     h2: { ...std("Shelby Township"),
       local: "A Fast-Growing Macomb County Community with Premium Finished Basements and a River Corridor",
       risk: "Shelby Township's Newer Custom Builds Have High-Value Finishes That Can't Wait" },
-    local: ["Clinton River corridor", "23, 25 and 26 Mile; Auburn Road; M-53", "1980s–90s subdivisions in the south", "Newer custom builds with finished basements in the north"],
   },
   {
     slug: "southfield", name: "Southfield", place: "Southfield", county: "Oakland", zips: ["48033", "48034", "48075", "48076"],
@@ -306,7 +280,6 @@ export const CITIES: City[] = [
       risk: "Block Foundations, Original Framing, and Shared Walls Change the Restoration Equation in Southfield",
       docs: "Residential, Commercial & Multi-Family Claim Documentation",
       services: "Full-Service Restoration for Southfield Homes, Businesses & Multi-Family Properties" },
-    local: ["Homes built mostly 1950s–1980s", "Block foundations, original plumbing and aging sump pumps", "Large multi-family and condo base", "Northwestern Highway, Telegraph, the Lodge and the Civic Center corridor"],
   },
   {
     slug: "sterling-heights-mi", name: "Sterling Heights", place: "Sterling Heights", county: "Macomb", zips: ["48310", "48312", "48313", "48314"],
@@ -317,7 +290,6 @@ export const CITIES: City[] = [
       local: "Clay Soil, a River Corridor, and Decades of Subdivision Housing",
       risk: "Michigan Clay Doesn't Stop Moving Just Because the Rain Does",
       docs: "Residential and Commercial Documentation for Macomb County's Largest City" },
-    local: ["Clinton River corridor", "Dodge Park, Plumbrook Village, Hatherly Village and Forest View", "Schoenherr and Van Dyke; 17 and 18 Mile", "1950s–1990s homes with block foundations, galvanized pipe and finished basements", "River flooding is treated as Category 3 water"],
   },
   {
     slug: "troy", name: "Troy", place: "Troy", county: "Oakland", zips: ["48083", "48084", "48085", "48098"],
@@ -331,7 +303,6 @@ export const CITIES: City[] = [
       docs: "Documentation That Covers the Full Scope of a Troy Water Loss",
       services: "Full-Service Restoration for Troy Homes & Businesses",
       cta: "Water Damage or a Restoration Need in Troy, MI?" },
-    local: ["Bayberry Place, Oak River, Northfield Hills and Crescent Ridge", "Big Beaver, Maple, Long Lake, Crooks and the Somerset corridor", "1960s–70s ranches and colonials; 1990s–2000s homes in northern Troy", "Galvanized supply lines and original drain tile"],
   },
   {
     slug: "waterford", name: "Waterford", place: "Waterford Township", county: "Oakland", zips: ["48327", "48328", "48329"],
@@ -345,7 +316,6 @@ export const CITIES: City[] = [
       docs: "Residential and Lakefront Claim Documentation",
       services: "Full-Service Restoration for Waterford Township Properties",
       cta: "Water, Fire, Mold or Odor Damage in Waterford, MI?" },
-    local: ["Cass, Elizabeth, Scott and Maceday lakes", "Pontiac Lake Recreation Area; Hatchery and Scott Lake roads", "1960s–1990s subdivisions on slab, basement and crawlspace", "High lakefront water tables", "The 2014 and 2021 Metro Detroit floods"],
   },
   {
     slug: "west-bloomfield", name: "West Bloomfield", place: "West Bloomfield", county: "Oakland", zips: ["48322", "48323", "48324"],
@@ -359,7 +329,6 @@ export const CITIES: City[] = [
       docs: "Lakefront Carrier Documentation — A Different Standard",
       services: "Full-Service Restoration for West Bloomfield's Lakefront & Inland Properties",
       cta: "Dealing With Water, Mold, Fire, or Odor Damage in West Bloomfield?" },
-    local: ["Orchard, Pine, Upper Long, Cass and Walnut lakes", "Walkout lower levels and seasonal lake cottages", "1970s–80s subdivisions and 1990s–2000s custom builds", "Glacial soils with high clay content", "Maple, Middlebelt, Greer and Halsted roads"],
   },
   {
     slug: "wixom", name: "Wixom", place: "Wixom", county: "Oakland", zips: ["48393"],
@@ -369,7 +338,6 @@ export const CITIES: City[] = [
     h2: { ...std("Wixom"),
       local: "1980s–2000s Residential Construction and Significant Commercial Corridors",
       risk: "Aging Builder-Grade Systems Are the Biggest Risk Factor in Wixom's Residential Base" },
-    local: ["Grand River Avenue and Wixom Road commercial and light industrial corridors", "1980s–2000s colonials, ranches and finished basements", "25–40-year-old sump pumps, drain tile and supply lines", "Heavy clay soil"],
   },
   {
     slug: "ypsilanti", name: "Ypsilanti", place: "Ypsilanti", county: "Washtenaw", zips: ["48197", "48198"],
@@ -379,7 +347,6 @@ export const CITIES: City[] = [
     h2: { ...std("Ypsilanti"),
       local: "Pre-1960s Urban Core, University Housing, and Mixed-Era Residential Stock",
       risk: "Aging Foundations and Original Plumbing Create Specific Vulnerability Patterns Across Ypsilanti" },
-    local: ["Depot Town and College Heights", "Eastern Michigan University student and rental housing", "Pre-1920s Craftsman and Victorian homes", "Stone foundations, cast iron and galvanized plumbing, 1930s–50s drain tile", "Huron River and Ford Lake"],
   },
 ];
 

@@ -20,19 +20,27 @@ export default function Contact() {
           <div>
             <Eyebrow>Contact Us</Eyebrow>
             <h1>Contact Restoration Group of Metro Detroit</h1>
-            <p className="lede">For active flooding or fire, call now rather than waiting on a form response.</p>
-            <a href={SITE.phoneHref} className="btn btn-call">Call {SITE.phone}</a>
-            <h2 style={{ marginTop: 36 }}>Call or Email Us</h2>
-            <p><strong>Phone</strong> — <a href={SITE.phoneHref}>{SITE.phone}</a></p>
-            <p><strong>Email</strong> — <a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+            <p className="lede">Call us directly for emergency response, or submit a service request online. We’ll confirm availability for your property address and get the process started.</p>
+
+            <div className="form-done" style={{ margin: "24px 0" }}>
+              <p className="form-done-head">For Emergency Response: Call {SITE.phone}</p>
+              <p style={{ margin: 0 }}>Active water damage, flooding, and fire damage require an immediate phone call — not a web form. We respond to calls faster than form submissions.</p>
+            </div>
+
+            <h2>Call or Email Us</h2>
+            <h3>Phone — <a href={SITE.phoneHref}>{SITE.phone}</a></h3>
+            <p>For emergency water damage, flooding, or fire damage — call directly. Do not wait for a form response.</p>
+            <h3>Email — <a href={`mailto:${SITE.email}`}>{SITE.email}</a></h3>
+            <p>For non-emergency inquiries, documentation requests, and general questions.</p>
             {/* TODO(Tony): add business hours and, if you want it shown, the office address. */}
-            <h2 style={{ marginTop: 36 }}>Service Area</h2>
-            <p>Select communities in Wayne, Oakland, Macomb, Livingston, and Washtenaw Counties. <Link href="/service-area/">See the full list and excluded ZIP codes</Link>.</p>
+            <h3>Service Area</h3>
+            <p>Serving select communities across Wayne, Oakland, Macomb, Livingston, and Washtenaw Counties. Availability varies by ZIP code. <Link href="/service-area/">See the full list and excluded ZIP codes</Link>.</p>
           </div>
           <div className="form-card">
             <h2>Submit a Service Request</h2>
-            <p className="note">For non-emergency inquiries.</p>
+            <p className="note">Fill out the form below for non-emergency inquiries. For active water damage, flooding, or fire damage, call us directly — don’t wait for a form response.</p>
             <RequestForm source="contact" />
+            <p className="note" style={{ marginTop: 12 }}>Submitting this form does not guarantee service availability or pricing. We will follow up to confirm whether we can assist with your property and project type.</p>
           </div>
         </div>
       </section>

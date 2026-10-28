@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   verification: { google: "WgScnyn5lir-ME9AeqktYGB7jLIjTruWo1EJISoJQOU" },
 };
 
-export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#13212f" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#14264a" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

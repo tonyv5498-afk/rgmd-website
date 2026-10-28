@@ -1,16 +1,16 @@
-/* Restoration Group of Metro Detroit
-   Ink navy for trust, a single safety-orange accent reserved for "call" actions,
-   cool concrete neutrals. TODO(Tony): align with brand colors from the logo file. */
+/* Restoration Group of Metro Detroit — colors taken from the logo:
+   navy (ring and "R"), fire orange, water blue, and the grey of the "G".
+   Orange is reserved for call actions. */
 :root {
-  --ink: #13212f;
-  --ink-2: #3c4b5a;
-  --muted: #627181;
+  --ink: #14264a;
+  --ink-2: #3d4a60;
+  --muted: #66707e;
   --line: #d9dee3;
   --concrete: #f1f3f4;
   --white: #ffffff;
-  --accent: #e0661f;
-  --accent-dark: #b94f12;
-  --blue: #1f4e79;
+  --accent: #e2661c;
+  --accent-dark: #b84f10;
+  --blue: #0a64a8;
   --f-display: "Barlow Semi Condensed", "Arial Narrow", Arial, sans-serif;
   --f-body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
   --radius: 6px;
@@ -50,7 +50,7 @@ p { margin: 0 0 1em; }
 .site-header { position: sticky; top: 0; z-index: 50; background: var(--white); border-bottom: 1px solid var(--line); }
 .nav-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
-.brand-mark { display: grid; place-items: center; width: 44px; height: 44px; background: var(--ink); color: var(--white); font: 700 1.1rem var(--f-display); border-radius: 4px; }
+.brand-logo { width: 60px; height: 60px; flex: none; }
 .brand-text { font: 700 1rem/1.1 var(--f-display); letter-spacing: .02em; }
 .menu-btn { display: none; font: 700 1rem var(--f-display); background: none; border: 2px solid var(--ink); border-radius: var(--radius); padding: 8px 14px; color: var(--ink); }
 .nav { display: flex; align-items: center; gap: 22px; }
@@ -60,7 +60,7 @@ p { margin: 0 0 1em; }
 .nav-drop > summary { list-style: none; }
 .nav-drop > summary::-webkit-details-marker { display: none; }
 .nav-drop > summary::after { content: " ▾"; font-size: .8em; }
-.nav-drop ul { position: absolute; top: calc(100% + 12px); left: -16px; min-width: 260px; margin: 0; padding: 8px 0; list-style: none; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 12px 30px rgba(19,33,47,.12); }
+.nav-drop ul { position: absolute; top: calc(100% + 12px); left: -16px; min-width: 260px; margin: 0; padding: 8px 0; list-style: none; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 12px 30px rgba(20,38,74,.12); }
 .nav-drop li a { display: block; padding: 8px 16px; color: var(--ink); text-decoration: none; }
 .nav-drop li a:hover { background: var(--concrete); }
 .nav-call { min-height: 42px; padding: 0 16px; }
@@ -87,7 +87,7 @@ p { margin: 0 0 1em; }
 /* Home hero split with form */
 .home-hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: start; padding-top: 48px; padding-bottom: 48px; }
 .home-hero > * { min-width: 0; }
-.form-card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 24px; box-shadow: 0 14px 40px rgba(19,33,47,.08); }
+.form-card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 24px; box-shadow: 0 14px 40px rgba(20,38,74,.08); }
 .form-card h2 { font-size: 1.5rem; }
 @media (max-width: 900px) { .home-hero { grid-template-columns: 1fr; } }
 
@@ -109,7 +109,9 @@ p { margin: 0 0 1em; }
 .tick-list { columns: 2; column-gap: 32px; padding: 0; list-style: none; margin: 0 0 1em; }
 .tick-list li { break-inside: avoid; padding: 4px 0 4px 22px; position: relative; }
 .tick-list li::before { content: ""; position: absolute; left: 0; top: .72em; width: 10px; height: 2px; background: var(--accent); }
+.tick-list.one-col { columns: 1; }
 @media (max-width: 560px) { .tick-list { columns: 1; } }
+.cols > .local-facts { align-self: center; }
 
 /* Cards */
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; margin-top: 24px; }
@@ -195,7 +197,7 @@ legend { font-weight: 600; font-size: .95rem; margin-bottom: 6px; }
 .form-done-head { font: 700 1.3rem var(--f-display); margin-bottom: 4px; }
 
 /* Footer */
-.site-footer { background: #0d1822; color: #b8c4cf; font-size: .95rem; }
+.site-footer { background: #0e1b36; color: #b8c4cf; font-size: .95rem; }
 .site-footer a { color: #dfe6ec; text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
 .footer-grid { display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 40px; padding-top: 48px; padding-bottom: 32px; }
@@ -206,5 +208,5 @@ legend { font-weight: 600; font-size: .95rem; margin-bottom: 6px; }
 .footer-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
 .footer-counties { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 18px; }
 .footer-county { color: var(--white); font-weight: 600; margin-bottom: 4px; }
-.footer-base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 16px; padding-bottom: 24px; border-top: 1px solid #22313f; font-size: .85rem; }
+.footer-base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 16px; padding-bottom: 24px; border-top: 1px solid #263a5e; font-size: .85rem; }
 @media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr; } }
