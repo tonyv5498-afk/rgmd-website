@@ -19,8 +19,8 @@ export default function Home() {
   const { yearsExperience, projectsCompleted, googleRating } = SITE.stats;
   const stats = [
     yearsExperience != null && { n: `${yearsExperience}+`, l: "Years of Experience" },
-    projectsCompleted != null && { n: `${projectsCompleted}+`, l: "Projects Completed" },
-    googleRating != null && { n: googleRating.toFixed(1), l: "Star Average on Google" },
+    projectsCompleted != null && { n: `${projectsCompleted.toLocaleString("en-US")}+`, l: "Projects Completed" },
+    googleRating != null && { n: `${googleRating.toFixed(1)} ★`, l: "Star Average on Google" },
   ].filter(Boolean) as { n: string; l: string }[];
 
   return (

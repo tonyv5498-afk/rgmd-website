@@ -16,6 +16,12 @@ export function businessSchema() {
     areaServed: SITE.counties.map((c) => ({ "@type": "AdministrativeArea", name: `${c} County, Michigan` })),
     address: { "@type": "PostalAddress", addressRegion: "MI", addressCountry: "US" },
     priceRange: "$$",
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "00:00",
+      closes: "23:59",
+    },
   };
 }
 

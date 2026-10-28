@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SITE } from "@/data/site";
 import { SERVICES } from "@/data/services";
 import { COUNTY_ORDER, citiesByCounty } from "@/data/cities";
@@ -8,10 +9,11 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-col">
-          <p className="footer-brand">{SITE.name}</p>
+          <Image src="/images/logo-wordmark-light.webp" alt={SITE.name} width={260} height={69} className="footer-logo" />
           <p>Independently owned and operated in Metro Detroit. Water, mold, fire, odor and reconstruction.</p>
           <p><a href={SITE.phoneHref} className="footer-phone">{SITE.phone}</a></p>
           <p>{SITE.email}</p>
+          <p>{SITE.hours}</p>
         </div>
         <div className="footer-col">
           <p className="footer-head">Services</p>

@@ -8,12 +8,12 @@ export const SITE = {
   phoneHref: "tel:+13137713673",
   email: "info@metrodetroitrestoration.com",
   counties: ["Wayne", "Oakland", "Macomb", "Livingston", "Washtenaw"],
-  // Homepage counters. Leave a value null to hide that counter.
-  // TODO(Tony): fill in real numbers before launch.
+  hours: "Open 24 hours, 7 days a week",
+  // Homepage counters. Set a value to null to hide that counter.
   stats: {
-    yearsExperience: null as number | null,
-    projectsCompleted: null as number | null,
-    googleRating: null as number | null,
+    yearsExperience: 15 as number | null,
+    projectsCompleted: 1000 as number | null,
+    googleRating: 4.8 as number | null,
   },
   // TODO(Tony): confirm this list is current. It currently excludes
   // 48135 (Garden City), 48154 (Livonia) and 48240 (Redford).

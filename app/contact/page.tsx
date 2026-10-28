@@ -32,7 +32,8 @@ export default function Contact() {
             <p>For emergency water damage, flooding, or fire damage — call directly. Do not wait for a form response.</p>
             <h3>Email — <a href={`mailto:${SITE.email}`}>{SITE.email}</a></h3>
             <p>For non-emergency inquiries, documentation requests, and general questions.</p>
-            {/* TODO(Tony): add business hours and, if you want it shown, the office address. */}
+            <h3>Hours — {SITE.hours}</h3>
+            <p>Emergency response is available around the clock, including nights, weekends and holidays.</p>
             <h3>Service Area</h3>
             <p>Serving select communities across Wayne, Oakland, Macomb, Livingston, and Washtenaw Counties. Availability varies by ZIP code. <Link href="/service-area/">See the full list and excluded ZIP codes</Link>.</p>
           </div>

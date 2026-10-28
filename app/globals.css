@@ -202,6 +202,7 @@ legend { font-weight: 600; font-size: .95rem; margin-bottom: 6px; }
 .site-footer a:hover { text-decoration: underline; }
 .footer-grid { display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 40px; padding-top: 48px; padding-bottom: 32px; }
 .footer-grid > * { min-width: 0; }
+.footer-logo { width: 260px; max-width: 100%; height: auto; margin-bottom: 12px; }
 .footer-brand { font: 700 1.2rem var(--f-display); color: var(--white); }
 .footer-phone { font: 700 1.4rem var(--f-display); color: var(--white) !important; }
 .footer-head { font: 700 .85rem var(--f-display); text-transform: uppercase; letter-spacing: .12em; color: var(--white); }

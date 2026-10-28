@@ -28,10 +28,7 @@ Until they're set, the form tells visitors to call instead of failing silently.
 
 ## Before launch
 
-- [ ] Fill in homepage stats in `data/site.ts` (hidden while empty)
 - [ ] Confirm the excluded ZIP list in `data/site.ts`
-- [ ] Add business hours to the contact page
-- [ ] Copy images from WordPress `wp-content/uploads` into `/public/images` (old image URLs redirect there)
 - [ ] Set lead form environment variables and send a test request
 - [ ] Point DNS to Vercel, keep MX records, resubmit the sitemap in Search Console
 

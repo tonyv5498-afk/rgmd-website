@@ -14,7 +14,7 @@ export default function Header() {
     <header className="site-header">
       <div className="topbar">
         <div className="container topbar-inner">
-          <span>Emergency response available</span>
+          <span>24/7 emergency response</span>
           <a href={SITE.phoneHref} className="topbar-phone">{SITE.phone}</a>
         </div>
       </div>
