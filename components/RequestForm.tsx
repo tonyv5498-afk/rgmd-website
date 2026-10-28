@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { SITE } from "@/data/site";
+import { EMAILJS } from "@/lib/emailjs";
 
 const DAMAGE_TYPES = ["Water", "Mold", "Fire", "Odor", "Other"];
 
@@ -15,19 +17,48 @@ export default function RequestForm({ source = "website" }: { source?: string })
     e.preventDefault();
     setStatus("sending");
     setError("");
-    const data = Object.fromEntries(new FormData(e.currentTarget).entries());
-    try {
-      const res = await fetch("/api/lead/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, source }),
-      });
-      const body = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(body.error || "We couldn't send your request.");
-      setStatus("sent");
-    } catch (err) {
+    const d = Object.fromEntries(new FormData(e.currentTarget).entries()) as Record<string, string>;
+
+    // Honeypot filled in: pretend success so bots don't retry.
+    if (d.company) { setStatus("sent"); return; }
+
+    const zip = (d.zip || "").trim();
+    if (!d.name?.trim() || !d.phone?.trim() || !/^\d{5}$/.test(zip)) {
       setStatus("error");
-      setError(err instanceof Error ? err.message : "We couldn't send your request.");
+      setError("Please add your name, phone number and a 5-digit ZIP code.");
+      return;
+    }
+    if (!EMAILJS.templateId) {
+      setStatus("error");
+      setError("Online requests aren't available right now.");
+      return;
+    }
+
+    const excluded = (SITE.excludedZips as readonly string[]).includes(zip);
+    try {
+      await emailjs.send(
+        EMAILJS.serviceId,
+        EMAILJS.templateId,
+        {
+          name: d.name.trim(),
+          phone: d.phone.trim(),
+          email: d.email?.trim() || "",
+          street: d.street?.trim() || "",
+          city: d.city?.trim() || "",
+          state: d.state?.trim() || "",
+          zip,
+          damage_type: d.damageType || "Not specified",
+          description: d.description?.trim() || "",
+          source,
+          page: typeof window !== "undefined" ? window.location.href : "",
+          zip_note: excluded ? "NOTE: this ZIP is on the excluded list." : "",
+        },
+        { publicKey: EMAILJS.publicKey },
+      );
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+      setError("We couldn't send your request.");
     }
   }
 
