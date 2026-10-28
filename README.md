@@ -26,12 +26,12 @@ The form sends through EmailJS from the visitor's browser, using the same EmailJ
 2. Put the template ID in `lib/emailjs.ts`, or set `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID` in Vercel and redeploy.
 3. EmailJS → Account → Security: add metrodetroitrestoration.com (and your Vercel preview domain while testing) to Allowed Origins.
 
-Until a template ID is set, the form tells visitors to call instead of failing silently.
+The RGMD template is `template_k6pheft`. If the template ID is ever removed, the form tells visitors to call instead of failing silently.
 
 ## Before launch
 
 - [ ] Confirm the excluded ZIP list in `data/site.ts`
-- [ ] Create the EmailJS template, add its ID, and send a test request
+- [ ] Send a test request from the Vercel preview (template_k6pheft)
 - [ ] Point DNS to Vercel, keep MX records, resubmit the sitemap in Search Console
 
 ## Commands

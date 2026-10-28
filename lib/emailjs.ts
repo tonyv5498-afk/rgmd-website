@@ -5,7 +5,6 @@
 export const EMAILJS = {
   publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "CD8OUYLrXJaz3o4rm",
   serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_pp03dbu",
-  // TODO(Tony): create the RGMD template in EmailJS and put its ID here
-  // (or set NEXT_PUBLIC_EMAILJS_TEMPLATE_ID in Vercel). Until then the form asks visitors to call.
-  templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
+  // RGMD service request template (sends to info@metrodetroitrestoration.com).
+  templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_k6pheft",
 };
