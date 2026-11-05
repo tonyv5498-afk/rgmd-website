@@ -3,10 +3,10 @@ import { SITE, AVAILABILITY_NOTE, COVERAGE_DISCLAIMER, DOC_DELIVERABLES } from "
 import { SERVICES, serviceBySlug } from "@/data/services";
 import { IconArrow, IconCheck, IconPhone } from "@/components/Icons";
 
-export function Eyebrow({ children }: { children: React.ReactNode }) {
-  // Section label set as a file tab on the section's top rule. Styled text, not a
-  // heading tag, so the H1 → H2 → H3 outline stays clean.
-  return <p className="eyebrow">{children}</p>;
+// Section labels above headings were retired in the redesign (owner approved);
+// headings carry their own weight. Kept as a no-op so page files stay unchanged.
+export function Eyebrow(_props: { children?: React.ReactNode }) {
+  return null;
 }
 
 export function CallButton({ label, className = "" }: { label?: string; className?: string }) {
@@ -35,7 +35,6 @@ export function Hero({ eyebrow, h1, lede, children }: { eyebrow?: string; h1: st
     <section className="hero grid-paper">
       <div className="container hero-split">
         <div className="hero-main">
-          {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
           <h1>{h1}</h1>
           {lede && <p className="lede">{lede}</p>}
           <div className="hero-actions">
@@ -50,7 +49,11 @@ export function Hero({ eyebrow, h1, lede, children }: { eyebrow?: string; h1: st
           <dl className="ticket-fields">
             <div><dt>Phone</dt><dd><a href={SITE.phoneHref} className="phone ticket-phone">{SITE.phone}</a></dd></div>
             <div><dt>Hours</dt><dd>{SITE.hours}</dd></div>
-            <div><dt>Coverage</dt><dd>Select communities in {SITE.counties.join(", ")} Counties</dd></div>
+            {eyebrow?.includes("County") ? (
+              <div><dt>Service area</dt><dd>{eyebrow}</dd></div>
+            ) : (
+              <div><dt>Coverage</dt><dd>Select communities in {SITE.counties.join(", ")} Counties</dd></div>
+            )}
           </dl>
         </aside>
       </div>
