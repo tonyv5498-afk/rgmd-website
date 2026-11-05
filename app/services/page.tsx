@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { IconArrow } from "@/components/Icons";
 import { Hero, CtaSection, Eyebrow, Breadcrumbs } from "@/components/Blocks";
 import { SERVICES } from "@/data/services";
 import { COUNTY_ORDER, citiesByCounty } from "@/data/cities";
@@ -46,7 +47,7 @@ export default function ServicesHub() {
               <Link key={s.slug} href={`/services/${s.slug}/`} className="card">
                 <h3>{s.name}</h3>
                 <p>{BLURBS[s.slug]}</p>
-                <span className="card-link">Learn more →</span>
+                <span className="card-link">Learn more <IconArrow size={16} /></span>
               </Link>
             ))}
           </div>

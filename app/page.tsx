@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE, REVIEWS, HOME_FAQ, WHY_US, WATER_PROCESS, WATER_SITUATIONS, COMMERCIAL_CLIENTS, AVAILABILITY_NOTE } from "@/data/site";
 import { COUNTY_ORDER, citiesByCounty } from "@/data/cities";
-import { Eyebrow, Steps, ServiceCards, DocsSection, CtaSection, FaqList, CallBand } from "@/components/Blocks";
+import { Eyebrow, Steps, ServiceCards, DocsSection, CtaSection, FaqList, CallBand, CallButton } from "@/components/Blocks";
+import MoistureMap from "@/components/MoistureMap";
+import { IconArrow, IconCheck, Stars, IconStar } from "@/components/Icons";
 import RequestForm from "@/components/RequestForm";
 import JsonLd from "@/components/JsonLd";
 import { faqSchema } from "@/lib/schema";
@@ -20,40 +22,53 @@ export default function Home() {
   const stats = [
     yearsExperience != null && { n: `${yearsExperience}+`, l: "Years of Experience" },
     projectsCompleted != null && { n: `${projectsCompleted.toLocaleString("en-US")}+`, l: "Projects Completed" },
-    googleRating != null && { n: `${googleRating.toFixed(1)} ★`, l: "Star Average on Google" },
-  ].filter(Boolean) as { n: string; l: string }[];
+    googleRating != null && { n: googleRating.toFixed(1), l: "Star Average on Google", star: true },
+  ].filter(Boolean) as { n: string; l: string; star?: boolean }[];
 
   return (
     <>
-      <section className="hero">
+      <section className="hero grid-paper home">
         <div className="container home-hero">
-          <div>
+          <div className="hero-main">
             <Eyebrow>Emergency response available · {SITE.phone}</Eyebrow>
             <h1>Water Damage, Fire Damage &amp; Mold Remediation in Metro Detroit</h1>
             <p className="lede">Independently owned and operated in Metro Detroit. We handle water damage, mold remediation, fire and smoke cleanup, and reconstruction coordination for homeowners, landlords, and property managers across select communities.</p>
-            <ul className="checks">
-              <li>Locally Owned, Operated and Headquartered</li>
-              <li>Full Service - Water, Mold, Fire, Odor and Reconstruction</li>
-              <li>Insurance Documentation Preparation and Supplement Support</li>
-              <li>Residential and Commercial Service</li>
-            </ul>
             <div className="hero-actions">
-              <a href={SITE.phoneHref} className="btn btn-call">Need Emergency Services? {SITE.phone}</a>
+              <CallButton label="Need Emergency Services?" className="btn-xl" />
             </div>
+            <ul className="checks">
+              <li><IconCheck size={18} />Locally Owned, Operated and Headquartered</li>
+              <li><IconCheck size={18} />Full Service - Water, Mold, Fire, Odor and Reconstruction</li>
+              <li><IconCheck size={18} />Insurance Documentation Preparation and Supplement Support</li>
+              <li><IconCheck size={18} />Residential and Commercial Service</li>
+            </ul>
             <p className="note">{AVAILABILITY_NOTE}</p>
           </div>
-          <div className="form-card">
-            <h2>Request Service Online</h2>
-            <RequestForm source="home" />
+          {/* Job photo slot: when real job photos arrive, a photo plate sits behind the map ticket here. */}
+          <div className="hero-visual">
+            <MoistureMap />
           </div>
         </div>
         {stats.length > 0 && (
           <div className="container">
-            <div className="stats">
-              {stats.map((s) => <div key={s.l} className="stat"><div className="stat-n">{s.n}</div><div className="stat-l">{s.l}</div></div>)}
-            </div>
+            <dl className="stats">
+              {stats.map((s) => <div key={s.l} className="stat"><dt className="stat-l">{s.l}</dt><dd className="stat-n mono">{s.n}{s.star && <IconStar size={26} className="stat-star" />}</dd></div>)}
+            </dl>
           </div>
         )}
+      </section>
+
+      <section className="section request">
+        <div className="container request-grid">
+          <div className="request-intro">
+            <h2>Request Service Online</h2>
+            <p>Active water damage, flooding, and fire damage require an immediate phone call — not a web form.</p>
+            <CallButton />
+          </div>
+          <div className="form-card">
+            <RequestForm source="home" />
+          </div>
+        </div>
       </section>
 
       <section className="section">
@@ -79,7 +94,7 @@ export default function Home() {
           <div>
             <h3>Avoid Secondary Damage</h3>
             <p>Water doesn’t stop moving once it enters a structure. Within hours, moisture migrates into walls, subfloor, and insulation — creating conditions for mold growth, structural weakening, and odor that compounds the original loss. Fast extraction and proper drying aren’t optional steps, they’re the difference between a manageable claim and a major rebuild. We respond quickly, assess accurately, and start mitigation before secondary damage turns a water call into a mold job.</p>
-            <a href={SITE.phoneHref} className="btn btn-call">Call Now - {SITE.phone}</a>
+            <CallButton label="Call Now -" />
           </div>
         </div>
       </section>
@@ -127,7 +142,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <p style={{ marginTop: 24 }}><Link href="/service-area/" className="text-link">Discover our service areas and excluded ZIP codes →</Link></p>
+          <p style={{ marginTop: 24 }}><Link href="/service-area/" className="text-link">Discover our service areas and excluded ZIP codes <IconArrow size={16} /></Link></p>
         </div>
       </section>
 
@@ -136,7 +151,7 @@ export default function Home() {
           <Eyebrow>Why Work With Us</Eyebrow>
           <h2>What Sets Us Apart</h2>
           <p className="prose">A local, operator-led restoration company. Not a franchise. Not a call center. Real people who understand mitigation, documentation, and what it takes to manage a claim.</p>
-          <div className="cards">
+          <div className="cards plain">
             {WHY_US.map((w) => <div key={w.title} className="card"><h3>{w.title}</h3><p>{w.body}</p></div>)}
           </div>
         </div>
@@ -150,7 +165,7 @@ export default function Home() {
           <div className="reviews">
             {REVIEWS.map((r) => (
               <figure key={r.author} className="review">
-                <div className="stars" aria-label="Rated 5 out of 5">★★★★★</div>
+                <Stars />
                 <blockquote>“{r.quote}”</blockquote>
                 <figcaption>{r.author} — {r.source}<span>{r.service}</span></figcaption>
               </figure>

@@ -7,3 +7,8 @@ out/
 next-env.d.ts
 .vercel
 .DS_Store
+
+# Impeccable runtime captures
+.impeccable/review/
+.impeccable/questions/
+.impeccable/mocks/

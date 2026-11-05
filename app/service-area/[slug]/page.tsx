@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { IconArrow } from "@/components/Icons";
 import { notFound } from "next/navigation";
 import { CITIES, cityBySlug } from "@/data/cities";
 import { cityCopy } from "@/lib/cityCopy";
@@ -86,7 +87,7 @@ export default async function CityPage({ params }: Props) {
               <Link key={s.slug} href={`/services/${s.slug}/`} className="card">
                 <h3>{s.name}</h3>
                 <p>{s.body}</p>
-                <span className="card-link">Learn more →</span>
+                <span className="card-link">Learn more <IconArrow size={16} /></span>
               </Link>
             ))}
           </div>
