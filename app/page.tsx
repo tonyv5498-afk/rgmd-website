@@ -46,7 +46,7 @@ export default function Home() {
             <p className="note">{AVAILABILITY_NOTE}</p>
           </div>
           <div className="hero-visual">
-            <JobPhoto />
+            <JobPhoto src="/images/jobs/ceiling-tear-out.webp" alt="Water-damaged ceiling opened to the framing by an RGMD crew in a two-story foyer" />
             <MoistureMap />
           </div>
         </div>

@@ -138,10 +138,10 @@ p { margin: 0 0 1em; }
 /* Hero visual: job photo plate with the map ticket overlapping its lower edge */
 .hero-visual { position: relative; padding-bottom: 8px; }
 .job-photo { margin: 0 0 0 12%; background: var(--paper); border: 2px solid var(--ink); }
-.job-photo-frame { position: relative; aspect-ratio: 16 / 10; background-color: var(--paper-2); background-image: repeating-linear-gradient(45deg, transparent 0 10px, rgba(20,38,74,.05) 10px 11px); }
+.job-photo-frame { position: relative; aspect-ratio: 4 / 3; background-color: var(--paper-2); background-image: repeating-linear-gradient(45deg, transparent 0 10px, rgba(20,38,74,.05) 10px 11px); }
 .job-photo-empty { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 9%; gap: 10px; color: var(--muted); font: 600 .9rem var(--f-body); text-align: center; padding: 0 24px; }
-.hero-visual .map-ticket { margin: -20% 12% 0 0; }
-@media (max-width: 960px) { .job-photo { margin-left: 0; } .hero-visual .map-ticket { margin: -18% 0 0 8%; } }
+.hero-visual .map-ticket { margin: -9% 14% 0 0; }
+@media (max-width: 960px) { .job-photo { margin-left: 0; } .hero-visual .map-ticket { margin: -8% 0 0 10%; } }
 
 /* Moisture map ticket */
 .map-ticket { position: relative; }

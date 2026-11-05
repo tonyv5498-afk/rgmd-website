@@ -11,7 +11,7 @@ export default function JobPhoto({ src, alt = "", caption }: { src?: string; alt
       </div>
       <div className="job-photo-frame">
         {src ? (
-          <Image src={src} alt={alt} fill sizes="(max-width: 960px) 100vw, 480px" style={{ objectFit: "cover" }} />
+          <Image src={src} alt={alt} fill priority sizes="(max-width: 960px) 100vw, 560px" style={{ objectFit: "cover", objectPosition: "50% 30%" }} />
         ) : (
           <div className="job-photo-empty" aria-hidden="true">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="square"><rect x="3" y="6" width="18" height="14" /><path d="M8 6l1.5-2.5h5L16 6" /><circle cx="12" cy="13" r="3.5" /></svg>
