@@ -24,7 +24,6 @@ const easeOut = (t: number) => 1 - Math.pow(2, -10 * t);
 
 export default function MoistureMap() {
   const [t, setT] = useState(0);
-  const [day, setDay] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const raf = useRef<number | null>(null);
   const tRef = useRef(0);
@@ -43,7 +42,6 @@ export default function MoistureMap() {
   }
 
   function goDay(i: number) {
-    setDay(i);
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) setT(DAYS[i]);
     else animateTo(DAYS[i], 1400);
   }
@@ -51,11 +49,11 @@ export default function MoistureMap() {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setT(1); setDay(2); return; }
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setT(1); return; }
     const io = new IntersectionObserver((entries) => {
       if (entries.some((e) => e.isIntersecting)) {
         io.disconnect();
-        setTimeout(() => { setDay(2); animateTo(1, 2600); }, 500);
+        setTimeout(() => { animateTo(1, 2600); }, 500);
       }
     }, { threshold: 0.5 });
     io.observe(el);
@@ -63,6 +61,7 @@ export default function MoistureMap() {
   }, []);
 
   const reached = t > 0.97;
+  const shownDay = t >= 0.97 ? 2 : t >= 0.5 ? 1 : 0;
 
   return (
     <div className="map-ticket" ref={ref}>
@@ -117,7 +116,7 @@ export default function MoistureMap() {
       <div className="ticket-foot">
         <div className="day-switch" role="group" aria-label="Show readings for">
           {["Day 1", "Day 2", "Day 3"].map((d, i) => (
-            <button key={d} type="button" aria-pressed={day === i} onClick={() => goDay(i)}>{d}</button>
+            <button key={d} type="button" aria-pressed={shownDay === i} onClick={() => goDay(i)}>{d}</button>
           ))}
         </div>
         <div className="legend">

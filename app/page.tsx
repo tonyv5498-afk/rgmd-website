@@ -4,6 +4,7 @@ import { SITE, REVIEWS, HOME_FAQ, WHY_US, WATER_PROCESS, WATER_SITUATIONS, COMME
 import { COUNTY_ORDER, citiesByCounty } from "@/data/cities";
 import { Eyebrow, Steps, ServiceCards, DocsSection, CtaSection, FaqList, CallBand, CallButton } from "@/components/Blocks";
 import MoistureMap from "@/components/MoistureMap";
+import JobPhoto from "@/components/JobPhoto";
 import { IconArrow, IconCheck, Stars, IconStar } from "@/components/Icons";
 import RequestForm from "@/components/RequestForm";
 import JsonLd from "@/components/JsonLd";
@@ -44,8 +45,8 @@ export default function Home() {
             </ul>
             <p className="note">{AVAILABILITY_NOTE}</p>
           </div>
-          {/* Job photo slot: when real job photos arrive, a photo plate sits behind the map ticket here. */}
           <div className="hero-visual">
+            <JobPhoto />
             <MoistureMap />
           </div>
         </div>
