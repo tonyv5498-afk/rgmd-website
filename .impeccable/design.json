@@ -1,0 +1,554 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T00:55:25+00:00",
+  "title": "Design System: Restoration Group of Metro Detroit",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Drafting Navy",
+        "canonical": "#14264a",
+        "oklch": "oklch(27.5% 0.071 262.6)",
+        "tonalRamp": [
+          "#060b15",
+          "#19253c",
+          "#304263",
+          "#4c6189",
+          "#6c83ad",
+          "#90a6cd",
+          "#b9cae8",
+          "#e6efff"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Pencil Navy",
+        "canonical": "#34425b",
+        "oklch": "oklch(37.8% 0.047 261.7)",
+        "tonalRamp": [
+          "#080b12",
+          "#1d2534",
+          "#364258",
+          "#53627c",
+          "#73839f",
+          "#97a6bf",
+          "#becade",
+          "#e9eff9"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#586579",
+        "oklch": "oklch(50.3% 0.036 258.9)",
+        "tonalRamp": [
+          "#080b10",
+          "#1e2531",
+          "#384353",
+          "#556276",
+          "#768398",
+          "#99a6b9",
+          "#c0cad9",
+          "#eaeff7"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Pale Rule",
+        "canonical": "#c9d2dd",
+        "oklch": "oklch(86.0% 0.018 253.4)",
+        "tonalRamp": [
+          "#090b0e",
+          "#21252b",
+          "#3c434a",
+          "#5a626b",
+          "#7b838d",
+          "#9ea6af",
+          "#c4cad1",
+          "#eceff2"
+        ]
+      },
+      "grid": {
+        "role": "neutral",
+        "displayName": "Grid Line",
+        "canonical": "#e7ecf2",
+        "oklch": "oklch(94.1% 0.010 252.8)",
+        "tonalRamp": [
+          "#0a0b0c",
+          "#232528",
+          "#3f4247",
+          "#5d6267",
+          "#7e8388",
+          "#a1a5aa",
+          "#c6c9cd",
+          "#edeff1"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Second Sheet",
+        "canonical": "#f4f6f9",
+        "oklch": "oklch(97.2% 0.005 258.3)",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#242526",
+          "#414244",
+          "#606164",
+          "#818285",
+          "#a3a5a7",
+          "#c8c9cb",
+          "#eeeeef"
+        ]
+      },
+      "mark": {
+        "role": "primary",
+        "displayName": "Field-Marking Orange",
+        "canonical": "#e2661c",
+        "oklch": "oklch(65.3% 0.173 45.8)",
+        "tonalRamp": [
+          "#1d0200",
+          "#411600",
+          "#6b2d08",
+          "#9e4101",
+          "#d15801",
+          "#f1834c",
+          "#fcb797",
+          "#fdeae1"
+        ]
+      },
+      "call": {
+        "role": "primary",
+        "displayName": "Call Orange",
+        "canonical": "#c2500e",
+        "oklch": "oklch(57.3% 0.161 43.9)",
+        "tonalRamp": [
+          "#1c0300",
+          "#421500",
+          "#6d2b08",
+          "#a03e01",
+          "#cd5c22",
+          "#ed8557",
+          "#feb596",
+          "#feeae1"
+        ]
+      },
+      "call-dark": {
+        "role": "primary",
+        "displayName": "Call Orange Pressed",
+        "canonical": "#a2420a",
+        "oklch": "oklch(50.2% 0.141 44.1)",
+        "tonalRamp": [
+          "#1a0400",
+          "#411601",
+          "#6f2900",
+          "#9e4008",
+          "#c56335",
+          "#e58a63",
+          "#fdb698",
+          "#feeae1"
+        ]
+      },
+      "call-tint": {
+        "role": "primary",
+        "displayName": "Call Tint",
+        "canonical": "#fff3ea",
+        "oklch": "oklch(97.1% 0.018 59.5)",
+        "tonalRamp": [
+          "#0d0b09",
+          "#292420",
+          "#48403a",
+          "#695f58",
+          "#8b8078",
+          "#ada39c",
+          "#cfc7c2",
+          "#f1eeeb"
+        ]
+      },
+      "dry": {
+        "role": "secondary",
+        "displayName": "Reading Blue",
+        "canonical": "#0a64a8",
+        "oklch": "oklch(49.3% 0.132 249.1)",
+        "tonalRamp": [
+          "#000c1c",
+          "#022645",
+          "#014476",
+          "#0e64a7",
+          "#3a87cc",
+          "#69aaea",
+          "#a2cefa",
+          "#e3f0fe"
+        ]
+      },
+      "dry-tint": {
+        "role": "secondary",
+        "displayName": "Dry Tint",
+        "canonical": "#eef5fb",
+        "oklch": "oklch(96.7% 0.011 243.7)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#222528",
+          "#3e4347",
+          "#5c6267",
+          "#7d8388",
+          "#a0a6ab",
+          "#c5cacd",
+          "#eceff1"
+        ]
+      },
+      "navy-deep": {
+        "role": "neutral",
+        "displayName": "Night Navy",
+        "canonical": "#0e1b36",
+        "oklch": "oklch(22.7% 0.056 263.3)",
+        "tonalRamp": [
+          "#070b13",
+          "#1c2537",
+          "#34425c",
+          "#516181",
+          "#7183a4",
+          "#95a5c4",
+          "#bdcae2",
+          "#e8effb"
+        ]
+      },
+      "on-navy": {
+        "role": "neutral",
+        "displayName": "On-Navy Grey",
+        "canonical": "#c7d1de",
+        "oklch": "oklch(85.7% 0.021 254.9)",
+        "tonalRamp": [
+          "#090b0e",
+          "#21252c",
+          "#3b434c",
+          "#59626d",
+          "#7a838f",
+          "#9da6b1",
+          "#c3cad2",
+          "#ebeff3"
+        ]
+      },
+      "navy-rule": {
+        "role": "neutral",
+        "displayName": "Navy Rule Light",
+        "canonical": "#2a3d63",
+        "oklch": "oklch(36.3% 0.070 263.2)",
+        "tonalRamp": [
+          "#060b15",
+          "#19253c",
+          "#304163",
+          "#4c6189",
+          "#6c82ad",
+          "#91a5cd",
+          "#bacae8",
+          "#e6efff"
+        ]
+      },
+      "error": {
+        "role": "error",
+        "displayName": "Error Red",
+        "canonical": "#a32116",
+        "oklch": "oklch(46.7% 0.167 29.7)",
+        "tonalRamp": [
+          "#1d0101",
+          "#4e0000",
+          "#7e0c05",
+          "#ab2d20",
+          "#d35343",
+          "#f37e6d",
+          "#feb4a7",
+          "#fee9e5"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page H1 only; inner heroes use clamp(2.3rem, 5.2vw, 4.1rem)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section H2s, standing alone with no label above."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "H3s, step titles, service-entry headings, FAQ questions."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All running text; prose capped at 70ch."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "The paragraph under an H1, in Pencil Navy, max 60ch."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Button labels; 1.25rem on the extra-large hero call."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase field terms inside tickets, stat labels, form labels, footer heads. Never above a section heading."
+      },
+      "ticket-title": {
+        "displayName": "Ticket Title",
+        "purpose": "Left side of a ticket head strip."
+      },
+      "reading": {
+        "displayName": "Reading",
+        "purpose": "Measured moisture values; ZIP tags at 0.9rem/500. Never phone numbers."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet",
+        "value": "0 22px 44px -26px rgba(20,38,74,.45)",
+        "purpose": "Tickets, claim-file sheet and form card sitting on the grid."
+      },
+      {
+        "name": "call-glow",
+        "value": "0 8px 18px -8px rgba(194,80,14,.6)",
+        "purpose": "Call buttons at rest."
+      },
+      {
+        "name": "call-glow-pressed",
+        "value": "0 3px 8px -4px rgba(194,80,14,.6)",
+        "purpose": "Call buttons while pressed."
+      },
+      {
+        "name": "dropdown",
+        "value": "0 18px 40px -12px rgba(20,38,74,.28)",
+        "purpose": "Desktop services menu."
+      },
+      {
+        "name": "sticky-bar",
+        "value": "0 -8px 24px -10px rgba(20,38,74,.5)",
+        "purpose": "Mobile sticky call bar, cast upward."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "All state transitions (0.2s buttons and fields, 0.35s card rule draw, 0.5s dry stamp)."
+      },
+      {
+        "name": "dry-down",
+        "value": "2600ms expo-out, 500ms delay, on 50% in-view",
+        "purpose": "Moisture map readings count down and shift orange to blue; day switch replays at 1400ms; reduced motion renders the dry state."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 3px solid #e2661c; outline-offset: 3px",
+        "purpose": "Global :focus-visible; white on navy grounds."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "brand-text-hide",
+        "value": "400px"
+      },
+      {
+        "name": "form-rows-stack",
+        "value": "520px"
+      },
+      {
+        "name": "lists-one-col",
+        "value": "560px"
+      },
+      {
+        "name": "stats-stack",
+        "value": "600px"
+      },
+      {
+        "name": "sticky-call",
+        "value": "700px"
+      },
+      {
+        "name": "cols-stack",
+        "value": "800px"
+      },
+      {
+        "name": "hero-stack",
+        "value": "900px"
+      },
+      {
+        "name": "home-hero-stack",
+        "value": "960px"
+      },
+      {
+        "name": "nav-collapse",
+        "value": "1000px"
+      },
+      {
+        "name": "container",
+        "value": "1200px"
+      }
+    ],
+    "surfaces": {
+      "grid-paper": "background-image: linear-gradient(#e7ecf2 1px, transparent 1px), linear-gradient(90deg, #e7ecf2 1px, transparent 1px); background-size: 24px 24px",
+      "photo-hatch": "repeating-linear-gradient(45deg, transparent 0 10px, rgba(20,38,74,.05) 10px 11px)",
+      "section-padding": "clamp(56px, 8vw, 96px) 0"
+    }
+  },
+  "components": [
+    {
+      "name": "Call Button",
+      "kind": "button",
+      "refersTo": "button-call",
+      "description": "The one action that matters: Call Orange, white label, phone in tabular numerals. Used in every viewport.",
+      "html": "<a href=\"tel:+13137713673\" class=\"ds-btn-call\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z\"/></svg><span>Call <span class=\"ds-phone\">(313) 771-3673</span></span></a>",
+      "css": ".ds-btn-call { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 2px; border: 2px solid transparent; background: var(--call, #c2500e); color: #fff; font: 700 1.1rem/1.1 var(--f-display, 'Archivo Variable', Archivo, 'Arial Narrow', sans-serif); font-stretch: 90%; letter-spacing: .01em; text-decoration: none; cursor: pointer; box-shadow: 0 8px 18px -8px rgba(194,80,14,.6); transition: background-color .2s var(--ease, cubic-bezier(.16,1,.3,1)), box-shadow .2s var(--ease, cubic-bezier(.16,1,.3,1)), transform .2s var(--ease, cubic-bezier(.16,1,.3,1)); } .ds-btn-call:hover { background: var(--call-dark, #a2420a); } .ds-btn-call:active { transform: translateY(1px); box-shadow: 0 3px 8px -4px rgba(194,80,14,.6); } .ds-btn-call:focus-visible { outline: 3px solid var(--mark, #e2661c); outline-offset: 3px; } .ds-phone { font-variant-numeric: tabular-nums; letter-spacing: .01em; white-space: nowrap; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary route (Request Service Online): navy stroke on paper, fills navy on hover.",
+      "html": "<a href=\"#\" class=\"ds-btn-ghost\">Request Service Online</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 24px; border-radius: 2px; border: 2px solid var(--ink, #14264a); background: var(--paper, #fff); color: var(--ink, #14264a); font: 700 1.1rem/1.1 var(--f-display, 'Archivo Variable', Archivo, 'Arial Narrow', sans-serif); font-stretch: 90%; letter-spacing: .01em; text-decoration: none; transition: background-color .2s var(--ease, cubic-bezier(.16,1,.3,1)), color .2s var(--ease, cubic-bezier(.16,1,.3,1)); } .ds-btn-ghost:hover { background: var(--ink, #14264a); color: #fff; } .ds-btn-ghost:focus-visible { outline: 3px solid var(--mark, #e2661c); outline-offset: 3px; }"
+    },
+    {
+      "name": "Ruled Field",
+      "kind": "input",
+      "refersTo": "input-ruled",
+      "description": "Form input as a ruled line on a second sheet: navy underline, warms to Call Tint with an orange rule on focus.",
+      "html": "<label class=\"ds-field\">ZIP <span class=\"ds-req\" aria-hidden=\"true\">*</span><input inputmode=\"numeric\" placeholder=\"48120\"></label>",
+      "css": ".ds-field { display: flex; flex-wrap: wrap; column-gap: 4px; row-gap: 6px; max-width: 320px; font: 700 .8rem/1.2 var(--f-display, 'Archivo Variable', Archivo, 'Arial Narrow', sans-serif); text-transform: uppercase; letter-spacing: .06em; color: var(--ink, #14264a); } .ds-field input { flex: 1 0 100%; font: 400 1rem/1.4 var(--f-body, 'Public Sans', system-ui, sans-serif); text-transform: none; letter-spacing: 0; padding: 11px 12px; border: 0; border-bottom: 2px solid var(--ink, #14264a); border-radius: 0; background: var(--paper-2, #f4f6f9); color: var(--ink, #14264a); transition: background-color .2s var(--ease, cubic-bezier(.16,1,.3,1)), border-color .2s var(--ease, cubic-bezier(.16,1,.3,1)); } .ds-field input:focus { outline: none; background: #fff3ea; border-bottom-color: var(--call, #c2500e); } .ds-req { color: var(--call, #c2500e); }"
+    },
+    {
+      "name": "Damage-Type Chip",
+      "kind": "chip",
+      "refersTo": "chip-option",
+      "description": "Square radio tile; checked fills Drafting Navy.",
+      "html": "<div class=\"ds-chips\"><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-t\" checked><span>Water</span></label><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-t\"><span>Mold</span></label><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-t\"><span>Fire</span></label></div>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 8px; } .ds-chip { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border: 2px solid var(--ink, #14264a); color: var(--ink, #14264a); background: var(--paper, #fff); font: 600 .95rem var(--f-body, 'Public Sans', system-ui, sans-serif); cursor: pointer; transition: background-color .2s var(--ease, cubic-bezier(.16,1,.3,1)), color .2s var(--ease, cubic-bezier(.16,1,.3,1)); } .ds-chip:hover { background: var(--paper-2, #f4f6f9); } .ds-chip input { margin: 0; accent-color: var(--call, #c2500e); } .ds-chip input:focus-visible { outline: 3px solid var(--mark, #e2661c); outline-offset: 3px; } .ds-chip:has(input:checked) { background: var(--ink, #14264a); color: #fff; }"
+    },
+    {
+      "name": "Ticket",
+      "kind": "card",
+      "refersTo": "ticket-head",
+      "description": "The container primitive: head strip, ruled field rows, 2px navy frame, Sheet shadow.",
+      "html": "<aside class=\"ds-ticket\"><div class=\"ds-ticket-head\"><span class=\"ds-ticket-title\">Emergency line</span><span class=\"ds-ticket-tag\">24/7</span></div><dl class=\"ds-ticket-fields\"><div><dt>Phone</dt><dd><a href=\"tel:+13137713673\" class=\"ds-ticket-phone\">(313) 771-3673</a></dd></div><div><dt>Hours</dt><dd>Open 24 hours, 7 days a week</dd></div></dl></aside>",
+      "css": ".ds-ticket { max-width: 380px; background: var(--paper, #fff); border: 2px solid var(--ink, #14264a); box-shadow: 0 22px 44px -26px rgba(20,38,74,.45); color: var(--ink, #14264a); font: 400 17px/1.6 var(--f-body, 'Public Sans', system-ui, sans-serif); } .ds-ticket-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 9px 16px; border-bottom: 2px solid var(--ink, #14264a); background: var(--paper-2, #f4f6f9); } .ds-ticket-title { font: 800 .95rem/1.2 var(--f-display, 'Archivo Variable', Archivo, 'Arial Narrow', sans-serif); text-transform: uppercase; letter-spacing: .06em; } .ds-ticket-tag { font-size: .78rem; font-weight: 700; color: var(--muted, #586579); text-transform: uppercase; } .ds-ticket-fields { margin: 0; } .ds-ticket-fields > div { padding: 12px 16px; border-bottom: 1px solid var(--rule, #c9d2dd); } .ds-ticket-fields > div:last-child { border-bottom: 0; } .ds-ticket-fields dt { font: 700 .74rem/1.2 var(--f-display, 'Archivo Variable', Archivo, 'Arial Narrow', sans-serif); text-transform: uppercase; letter-spacing: .08em; color: var(--muted, #586579); margin-bottom: 3px; } .ds-ticket-fields dd { margin: 0; } .ds-ticket-phone { font: 800 1.65rem/1.1 var(--f-display, 'Archivo Variable', Archivo, 'Arial Narrow', sans-serif); font-variant-numeric: tabular-nums; color: var(--call, #c2500e); text-decoration: none; } .ds-ticket-phone:hover { color: var(--call-dark, #a2420a); } .ds-ticket-phone:focus-visible { outline: 3px solid var(--mark, #e2661c); outline-offset: 3px; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "button-call",
+      "description": "Sticky paper header with 2px navy rule; links underline in Field-Marking Orange; call button closes the row.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-brand\">Restoration Group<br>of Metro Detroit</span><div class=\"ds-nav-links\"><a href=\"#\">Services <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\"/></svg></a><a href=\"#\">Service Area</a><a href=\"#\">Insurance Help</a><a href=\"tel:+13137713673\" class=\"ds-nav-call\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z\"/></svg><span>(313) 771-3673</span></a></div></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; padding: 0 20px; background: var(--paper, #fff); border-bottom: 2px solid var(--ink, #14264a); font: 600 17px/1.6 var(--f-body, 'Public Sans', system-ui, sans-serif); } .ds-brand { font: 800 1.05rem/1.05 var(--f-display, 'Archivo Variable', Archivo, 'Arial Narrow', sans-serif); font-stretch: 85%; letter-spacing: .01em; text-transform: uppercase; color: var(--ink, #14264a); } .ds-nav-links { display: flex; align-items: center; gap: 24px; } .ds-nav-links > a:not(.ds-nav-call) { display: inline-flex; align-items: center; gap: 4px; color: var(--ink, #14264a); text-decoration: none; } .ds-nav-links > a:not(.ds-nav-call):hover { text-decoration: underline; text-decoration-color: var(--mark, #e2661c); text-decoration-thickness: 2px; text-underline-offset: .2em; } .ds-nav-links a:focus-visible { outline: 3px solid var(--mark, #e2661c); outline-offset: 3px; } .ds-nav-call { display: inline-flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 16px; border-radius: 2px; background: var(--call, #c2500e); color: #fff; font: 700 1rem/1.1 var(--f-display, 'Archivo Variable', Archivo, 'Arial Narrow', sans-serif); font-stretch: 90%; font-variant-numeric: tabular-nums; text-decoration: none; box-shadow: 0 8px 18px -8px rgba(194,80,14,.6); transition: background-color .2s var(--ease, cubic-bezier(.16,1,.3,1)); } .ds-nav-call:hover { background: var(--call-dark, #a2420a); }"
+    },
+    {
+      "name": "Service Index Entry",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Ruled row instead of a boxed card; an orange line draws across the top on hover.",
+      "html": "<div class=\"ds-cards\"><a href=\"#\" class=\"ds-card\"><h3>Water Damage Restoration</h3><p>Extraction, drying and documented moisture readings through dry-out.</p><span class=\"ds-card-link\">Learn more <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\"/></svg></span></a><a href=\"#\" class=\"ds-card\"><h3>Mold Remediation</h3><p>Containment, removal and clearance for affected areas.</p><span class=\"ds-card-link\">Learn more <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\"/></svg></span></a></div>",
+      "css": ".ds-cards { border-top: 2px solid var(--ink, #14264a); font: 400 17px/1.6 var(--f-body, 'Public Sans', system-ui, sans-serif); } .ds-card { position: relative; display: grid; grid-template-columns: minmax(0,14rem) minmax(0,1fr) auto; column-gap: 32px; align-items: baseline; padding: 22px 0; border-bottom: 1px solid var(--rule, #c9d2dd); text-decoration: none; color: var(--ink, #14264a); } .ds-card::before { content: ''; position: absolute; left: 0; top: -2px; height: 2px; width: 0; background: var(--mark, #e2661c); transition: width .35s var(--ease, cubic-bezier(.16,1,.3,1)); } .ds-card:hover::before { width: 100%; } .ds-card h3 { margin: 0; font: 700 1.45rem/1.15 var(--f-display, 'Archivo Variable', Archivo, 'Arial Narrow', sans-serif); font-stretch: 88%; letter-spacing: -.012em; transition: color .2s var(--ease, cubic-bezier(.16,1,.3,1)); } .ds-card:hover h3 { color: var(--call-dark, #a2420a); } .ds-card p { margin: 0; color: var(--ink-2, #34425b); font-size: .98rem; } .ds-card-link { display: inline-flex; align-items: center; gap: 6px; color: var(--dry, #0a64a8); font-weight: 700; white-space: nowrap; } .ds-card-link svg { transition: transform .25s var(--ease, cubic-bezier(.16,1,.3,1)); } .ds-card:hover .ds-card-link svg { transform: translateX(3px); } .ds-card:focus-visible { outline: 3px solid var(--mark, #e2661c); outline-offset: 3px; }"
+    },
+    {
+      "name": "Moisture Reading",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Signature instrument: reading markers in mono, orange when wet, blue when dry, with the tilted dry stamp.",
+      "html": "<div class=\"ds-readings\"><span class=\"ds-reading ds-wet\"><i></i><b>A</b><span class=\"ds-val\">38%</span></span><span class=\"ds-reading ds-dry\"><i></i><b>A</b><span class=\"ds-val\">11%</span></span><span class=\"ds-stamp\">Dry standard reached</span></div>",
+      "css": ".ds-readings { display: flex; align-items: center; gap: 24px; padding: 16px; background-color: #fff; background-image: linear-gradient(var(--grid, #e7ecf2) 1px, transparent 1px), linear-gradient(90deg, var(--grid, #e7ecf2) 1px, transparent 1px); background-size: 20px 20px; border: 2px solid var(--ink, #14264a); } .ds-reading { display: inline-flex; align-items: center; gap: 8px; } .ds-reading i { width: 24px; height: 24px; border-radius: 50%; background: #fff; border: 3px solid currentColor; box-shadow: inset 0 0 0 5px #fff, inset 0 0 0 9px currentColor; } .ds-reading b { font: 700 12px var(--f-display, 'Archivo Variable', Archivo, 'Arial Narrow', sans-serif); color: var(--ink, #14264a); } .ds-val { font: 700 17px var(--f-mono, 'JetBrains Mono', ui-monospace, monospace); font-variant-numeric: tabular-nums; letter-spacing: -.01em; } .ds-wet { color: var(--mark, #e2661c); } .ds-dry { color: var(--dry, #0a64a8); } .ds-stamp { font: 700 .72rem/1 var(--f-display, 'Archivo Variable', Archivo, 'Arial Narrow', sans-serif); text-transform: uppercase; letter-spacing: .08em; padding: 5px 8px; border: 2px solid var(--dry, #0a64a8); color: var(--dry, #0a64a8); transform: rotate(-3deg); transition: transform .5s var(--ease, cubic-bezier(.16,1,.3,1)); } .ds-stamp:hover { transform: rotate(0); }"
+    },
+    {
+      "name": "Call Band",
+      "kind": "custom",
+      "refersTo": "call-band",
+      "description": "Night Navy strip between dashed rules with the phone as a Call Orange slab.",
+      "html": "<div class=\"ds-band\"><span class=\"ds-band-text\">Need Emergency Services?</span><span class=\"ds-band-hours\">Open 24 hours, 7 days a week</span><a href=\"tel:+13137713673\" class=\"ds-band-phone\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z\"/></svg>(313) 771-3673</a></div>",
+      "css": ".ds-band { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; padding: 18px 20px; background: var(--navy-deep, #0e1b36); color: #fff; border-top: 2px dashed #3a4f78; border-bottom: 2px dashed #3a4f78; font: 400 17px/1.6 var(--f-body, 'Public Sans', system-ui, sans-serif); } .ds-band-text { font: 800 1.5rem/1.1 var(--f-display, 'Archivo Variable', Archivo, 'Arial Narrow', sans-serif); font-stretch: 85%; text-transform: uppercase; letter-spacing: .01em; } .ds-band-hours { color: var(--on-navy, #c7d1de); font-size: .95rem; } .ds-band-phone { margin-left: auto; display: inline-flex; align-items: center; gap: 12px; padding: 6px 18px; background: var(--call, #c2500e); color: #fff; font: 800 2rem/1.1 var(--f-display, 'Archivo Variable', Archivo, 'Arial Narrow', sans-serif); font-variant-numeric: tabular-nums; text-decoration: none; transition: background-color .2s var(--ease, cubic-bezier(.16,1,.3,1)); } .ds-band-phone:hover { background: var(--call-dark, #a2420a); } .ds-band-phone:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ruled Checklist",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Hero trust checks as a ruled list with Reading Blue ticks.",
+      "html": "<ul class=\"ds-checks\"><li><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M4 12.5l5 5L20 6.5\"/></svg>Locally Owned, Operated and Headquartered</li><li><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M4 12.5l5 5L20 6.5\"/></svg>Insurance Documentation Preparation and Supplement Support</li></ul>",
+      "css": ".ds-checks { list-style: none; padding: 0; margin: 0; max-width: 560px; border-top: 1px solid var(--rule, #c9d2dd); font: 600 17px/1.6 var(--f-body, 'Public Sans', system-ui, sans-serif); color: var(--ink, #14264a); } .ds-checks li { display: flex; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--rule, #c9d2dd); } .ds-checks svg { color: var(--dry, #0a64a8); flex: none; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Job File",
+    "overview": "The site reads like the documentation RGMD hands an adjuster: cool drafting-grid paper, navy linework, ruled form fields, file-tab ticket headers and stamped status marks, laid over the contractor layout a homeowner already knows (phone up top, call button, services, reviews, FAQ, call band). The world is the paperwork that wins claims, so the visual proof of competence is order: everything is ruled, labeled, measured and dated.\n\nDensity is calm and practical. Generous section padding, one strong heading per section with no label above it, hairline dividers between rows instead of boxes around them. Color is almost entirely navy on white. Orange appears where something is wet or where a tap gets help. Blue appears where something is dry, checked or linked. The single motion signature is the moisture map drying down from orange to blue as it enters view.\n\nThe system refuses the stock flooded-basement hero with a badge row. Photographs, when they arrive, are real RGMD job photos in a labeled plate. Until then the plate says so.",
+    "keyCharacteristics": [
+      "White paper with a faint 24px blue-grey drafting grid on hero surfaces.",
+      "Navy (#14264a) linework: 2px frames and section tops, 1px pale rules between rows.",
+      "Two oranges: a graphic marking orange and a darker call orange that carries white text.",
+      "Archivo condensed for every heading and label; Public Sans for reading; JetBrains Mono only for measured values.",
+      "Square corners. Sheets sit on the page with one soft, low, navy-tinted shadow.",
+      "Tickets (header strip, ruled field rows, footer row) are the container primitive."
+    ],
+    "rules": [
+      {
+        "name": "The Two Oranges Rule",
+        "body": "Field-Marking Orange (#e2661c) is never a text color and never sits behind text; it marks wet readings and draws lines, stars and focus rings. Anything a person reads or taps that is orange uses Call Orange (#c2500e) or darker.",
+        "section": "colors"
+      },
+      {
+        "name": "The Wet-to-Dry Rule",
+        "body": "Orange means wet, elevated or act now. Blue means dry, checked or done. Never swap them, and never use either for decoration that is neither.",
+        "section": "colors"
+      },
+      {
+        "name": "The Navy Linework Rule",
+        "body": "Structure is drawn, not filled: 2px Drafting Navy for a sheet's outer frame, a ticket's head and foot, and the top edge of a ruled list; 1px Pale Rule for every row divider inside.",
+        "section": "colors"
+      },
+      {
+        "name": "The Readings-Only Mono Rule",
+        "body": "JetBrains Mono is for measured readings, ZIP codes and timestamps. Phone numbers, stats, labels and prose use Archivo or Public Sans with tabular numerals.",
+        "section": "typography"
+      },
+      {
+        "name": "The Bare Heading Rule",
+        "body": "Headings stand alone. Uppercase tracked labels belong inside a document (ticket head, field term, stat label, form label), never floating above a section heading.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper-on-Desk Rule",
+        "body": "A shadow means \"this is a sheet of paper.\" Only tickets, menus and call surfaces get one; sections, lists and rows never do.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do put a Call Orange (#c2500e) call action in every viewport: header button, hero call, call band, CTA section, and the 60px sticky bar on phones.",
+      "Do build containers as tickets: head strip, ruled field rows, 2px navy frame, Sheet shadow.",
+      "Do divide rows with 1px Pale Rule (#c9d2dd) under a 2px Drafting Navy top edge instead of boxing each item.",
+      "Do set phone numbers in the surrounding face with tabular numerals and no wrapping.",
+      "Do label anything illustrative or pending as such (\"Example\", \"Coming soon\") in the ticket tag.",
+      "Do ease state changes on cubic-bezier(.16, 1, .3, 1) and give every animation a reduced-motion end state.",
+      "Do draw icons from the one stroke set: 24px grid, 2.25px strokes, square caps, mitered joins."
+    ],
+    "donts": [
+      "Don't set text in or on Field-Marking Orange (#e2661c); it is for wet readings and drawn marks only.",
+      "Don't use JetBrains Mono for phone numbers, labels, stats or prose.",
+      "Don't place an uppercase section label above a heading.",
+      "Don't use hard offset shadows, or shadows on sections and list rows.",
+      "Don't round corners beyond 2px; circles are only for reading markers, swatches and step nodes.",
+      "Don't show stock photography as RGMD work; job photos are real or the plate says \"Coming soon.\"",
+      "Don't use Reading Blue and orange interchangeably: blue is dry and done, orange is wet and act-now."
+    ]
+  }
+}

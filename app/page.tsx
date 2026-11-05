@@ -53,7 +53,7 @@ export default function Home() {
         {stats.length > 0 && (
           <div className="container">
             <dl className="stats">
-              {stats.map((s) => <div key={s.l} className="stat"><dt className="stat-l">{s.l}</dt><dd className="stat-n mono">{s.n}{s.star && <IconStar size={26} className="stat-star" />}</dd></div>)}
+              {stats.map((s) => <div key={s.l} className="stat"><dt className="stat-l">{s.l}</dt><dd className="stat-n">{s.n}{s.star && <IconStar size={26} className="stat-star" />}</dd></div>)}
             </dl>
           </div>
         )}

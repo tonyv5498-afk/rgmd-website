@@ -7,7 +7,7 @@ export default function JobPhoto({ src, alt = "", caption }: { src?: string; alt
     <figure className="job-photo">
       <div className="ticket-head">
         <span className="ticket-title">Job photo</span>
-        <span className="mono ticket-tag">{src ? "RGMD job" : "Coming soon"}</span>
+        <span className="ticket-tag">{src ? "RGMD job" : "Coming soon"}</span>
       </div>
       <div className="job-photo-frame">
         {src ? (

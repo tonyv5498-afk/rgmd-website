@@ -67,7 +67,7 @@ export default function MoistureMap() {
     <div className="map-ticket" ref={ref}>
       <div className="ticket-head">
         <span className="ticket-title">Moisture map</span>
-        <span className="mono ticket-tag">Example</span>
+        <span className="ticket-tag">Example</span>
       </div>
 
       <svg viewBox="0 0 560 380" className="map-svg" role="img"

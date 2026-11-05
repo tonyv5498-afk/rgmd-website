@@ -45,7 +45,7 @@ export function Hero({ eyebrow, h1, lede, children }: { eyebrow?: string; h1: st
           {children}
         </div>
         <aside className="hero-ticket" aria-label="Emergency contact">
-          <div className="ticket-head"><span className="ticket-title">Emergency line</span><span className="mono ticket-tag">24/7</span></div>
+          <div className="ticket-head"><span className="ticket-title">Emergency line</span><span className="ticket-tag">24/7</span></div>
           <dl className="ticket-fields">
             <div><dt>Phone</dt><dd><a href={SITE.phoneHref} className="phone ticket-phone">{SITE.phone}</a></dd></div>
             <div><dt>Hours</dt><dd>{SITE.hours}</dd></div>
