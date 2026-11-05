@@ -31,7 +31,7 @@ export default function Home() {
       <section className="hero grid-paper home">
         <div className="container home-hero">
           <div className="hero-main">
-            <Eyebrow>Emergency response available · {SITE.phone}</Eyebrow>
+            <Eyebrow>Emergency response available · <span className="phone">{SITE.phone}</span></Eyebrow>
             <h1>Water Damage, Fire Damage &amp; Mold Remediation in Metro Detroit</h1>
             <p className="lede">Independently owned and operated in Metro Detroit. We handle water damage, mold remediation, fire and smoke cleanup, and reconstruction coordination for homeowners, landlords, and property managers across select communities.</p>
             <div className="hero-actions">
