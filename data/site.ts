@@ -3,7 +3,7 @@
 export const SITE = {
   name: "Restoration Group of Metro Detroit",
   shortName: "RGMD",
-  url: "https://metrodetroitrestoration.com",
+  url: "https://www.restorationgroupmd.com",
   phone: "(313) 771-3673",
   phoneHref: "tel:+13137713673",
   email: "info@metrodetroitrestoration.com",

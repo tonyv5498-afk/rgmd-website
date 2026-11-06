@@ -2,7 +2,7 @@
   "name": "rgmd-website",
   "version": "1.0.0",
   "private": true,
-  "description": "Restoration Group of Metro Detroit — metrodetroitrestoration.com",
+  "description": "Restoration Group of Metro Detroit — restorationgroupmd.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
