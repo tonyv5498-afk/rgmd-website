@@ -6,7 +6,7 @@ export const SITE = {
   url: "https://www.restorationgroupmd.com",
   phone: "(313) 771-3673",
   phoneHref: "tel:+13137713673",
-  email: "info@metrodetroitrestoration.com",
+  email: "info@restorationgroupmd.com",
   counties: ["Wayne", "Oakland", "Macomb", "Livingston", "Washtenaw"],
   hours: "Open 24 hours, 7 days a week",
   // Homepage counters. Set a value to null to hide that counter.

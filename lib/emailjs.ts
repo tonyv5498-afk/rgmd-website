@@ -5,6 +5,6 @@
 export const EMAILJS = {
   publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "CD8OUYLrXJaz3o4rm",
   serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_pp03dbu",
-  // RGMD service request template (sends to info@metrodetroitrestoration.com).
+  // RGMD service request template (sends to info@restorationgroupmd.com).
   templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_k6pheft",
 };

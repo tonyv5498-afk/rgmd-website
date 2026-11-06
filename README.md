@@ -20,7 +20,7 @@ Every URL matches the WordPress site exactly, including trailing slashes.
 
 The form sends through EmailJS from the visitor's browser, using the same EmailJS account and email service as guardianbuild.com.
 
-1. EmailJS → Email Templates → Create New Template, sent to info@metrodetroitrestoration.com.
+1. EmailJS → Email Templates → Create New Template, sent to info@restorationgroupmd.com.
    Variables: `{{name}}`, `{{phone}}`, `{{email}}`, `{{street}}`, `{{city}}`, `{{state}}`, `{{zip}}`,
    `{{damage_type}}`, `{{description}}`, `{{source}}`, `{{page}}`, `{{zip_note}}`. Reply-To: `{{email}}`.
 2. Put the template ID in `lib/emailjs.ts`, or set `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID` in Vercel and redeploy.
