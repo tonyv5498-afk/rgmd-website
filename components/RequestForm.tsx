@@ -4,6 +4,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { SITE } from "@/data/site";
 import { EMAILJS } from "@/lib/emailjs";
+import { track } from "@/lib/gtm";
 
 const DAMAGE_TYPES = ["Water", "Mold", "Fire", "Odor", "Other"];
 
@@ -55,6 +56,7 @@ export default function RequestForm({ source = "website" }: { source?: string })
         },
         { publicKey: EMAILJS.publicKey },
       );
+      track("form_submit", { form_source: source, damage_type: d.damageType || "Not specified", page_path: window.location.pathname });
       setStatus("sent");
     } catch {
       setStatus("error");

@@ -43,3 +43,11 @@ npm install
 npm run dev     # http://localhost:3000
 npm run build
 ```
+
+## Google Tag Manager
+
+Set the container ID in Vercel → Project → Settings → Environment Variables as `NEXT_PUBLIC_GTM_ID` (e.g. `GTM-ABC1234`), then redeploy. With no ID, no GTM code loads.
+
+Data layer events the site sends (no personal details):
+- `phone_click`: any tap on the phone number. `click_location` is sticky_bar, header, hero, footer or page; also `page_path`.
+- `form_submit`: a service request sent successfully. Includes `form_source` (home, contact, commercial-plan…), `damage_type`, `page_path`.

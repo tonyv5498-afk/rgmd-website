@@ -12,6 +12,8 @@ import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/data/site";
 import { businessSchema } from "@/lib/schema";
 import { IconPhone } from "@/components/Icons";
+import Analytics from "@/components/Analytics";
+import { GTM_ID } from "@/lib/gtm";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -30,6 +32,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
+        {GTM_ID && (
+          <noscript>
+            <iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`} height="0" width="0" style={{ display: "none", visibility: "hidden" }} title="Google Tag Manager" />
+          </noscript>
+        )}
+        <Analytics />
         <a href="#main" className="skip">Skip to content</a>
         <Header />
         <main id="main">{children}</main>
