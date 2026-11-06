@@ -3,6 +3,7 @@ import Image from "next/image";
 import { SITE, REVIEWS } from "@/data/site";
 import RequestForm from "@/components/RequestForm";
 import { IconPhone, Stars } from "@/components/Icons";
+import techPhoto from "./rgmd-tech-water-extraction.webp";
 import "./lp.css";
 
 // Paid-ads landing page. Kept out of search results so it doesn't compete with
@@ -79,9 +80,6 @@ export default async function WaterDamageLP({ searchParams }: Props) {
                 {googleRating && <div><dt>Google rating</dt><dd className="mono">{googleRating}<Stars /></dd></div>}
               </dl>
             )}
-            <figure className="lp-hero-photo">
-              <Image src="/images/jobs/rgmd-tech-water-extraction.webp" alt="RGMD technician extracting water from a commercial floor" width={971} height={682} priority sizes="(max-width: 1000px) 100vw, 640px" />
-            </figure>
           </div>
 
           <div className="form-card lp-form" id="request">
@@ -185,11 +183,16 @@ export default async function WaterDamageLP({ searchParams }: Props) {
       <section className="section">
         <div className="container">
           <div className="lp-area">
-            <p className="lp-kicker">Service area</p>
-            <h2>Serving Metro Detroit</h2>
-            <p className="lp-area-sub">Emergency water damage, fire damage and mold remediation across five counties.</p>
-            <ul className="lp-counties">{SITE.counties.map((c) => <li key={c}>{c} County</li>)}</ul>
-            <CallBtn label={`Call ${SITE.phone}`} className="btn-xl" />
+            <div className="lp-area-copy">
+              <p className="lp-kicker">Service area</p>
+              <h2>Serving Metro Detroit</h2>
+              <p className="lp-area-sub">Emergency water damage, fire damage and mold remediation across five counties.</p>
+              <ul className="lp-counties">{SITE.counties.map((c) => <li key={c}>{c} County</li>)}</ul>
+              <CallBtn label={`Call ${SITE.phone}`} className="btn-xl" />
+            </div>
+            <figure className="lp-area-photo">
+              <Image src={techPhoto} alt="RGMD technician extracting water from a commercial floor" sizes="(max-width: 1000px) 100vw, 560px" />
+            </figure>
           </div>
         </div>
       </section>
