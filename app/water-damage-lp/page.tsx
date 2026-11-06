@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { SITE, REVIEWS } from "@/data/site";
-import { CITIES } from "@/data/cities";
 import RequestForm from "@/components/RequestForm";
-import { IconCheck, IconPhone, Stars } from "@/components/Icons";
+import { IconPhone, Stars } from "@/components/Icons";
 import "./lp.css";
 
 // Paid-ads landing page. Kept out of search results so it doesn't compete with
@@ -34,15 +33,6 @@ const TIMELINE = [
   { when: "Hours", body: "Drywall swells, wood flooring cups, and furniture and stored items keep absorbing moisture.", level: 34 },
   { when: "24–48 Hours", body: "Wet materials that haven't been dried are at risk of mold growth.", level: 56 },
   { when: "Days", body: "Odors set in and damage can move into subfloors and framing, making it a bigger rebuild.", level: 80 },
-];
-
-const SERVICES = [
-  { name: "Emergency Water Removal", body: "Commercial extraction equipment pulls standing water out fast, followed by structural drying to stop the spread.", fire: false },
-  { name: "Basement Flood Cleanup", body: "Heavy rain, groundwater or a failed sump pump. We pump it out, remove damaged materials and dry the space.", fire: false },
-  { name: "Burst & Frozen Pipe Cleanup", body: "A burst pipe can release a lot of water fast. Shut off the main if you safely can, then call.", fire: false },
-  { name: "Sewage Backup Cleanup", body: "Category 3 contaminated water needs proper removal, disposal and sanitizing.", fire: false },
-  { name: "Sump Pump Failure Cleanup", body: "Pump quit during a storm or outage? We extract, dry the basement and document the loss.", fire: false },
-  { name: "Fire & Smoke Damage", body: "Fire, smoke and odor restoration, plus the water damage left behind from firefighting.", fire: true },
 ];
 
 const WHY = [
@@ -81,13 +71,7 @@ export default async function WaterDamageLP({ searchParams }: Props) {
             <p className="lp-lede">{v.lede} <strong>Call now and talk to a real person, 24/7.</strong></p>
             <div className="lp-ctas">
               <CallBtn className="btn-xl lp-pulse" />
-              <a href="#request" className="btn btn-ghost-light lp-ghost">Request a Callback</a>
             </div>
-            <ul className="lp-checks">
-              <li><IconCheck size={18} />Open 24/7/365</li>
-              <li><IconCheck size={18} />Callback typically within 1 hour</li>
-              <li><IconCheck size={18} />Insurance documentation support</li>
-            </ul>
             {(yearsExperience || projectsCompleted || googleRating) && (
               <dl className="lp-stats">
                 {yearsExperience && <div><dt>Years experience</dt><dd className="mono">{yearsExperience}+</dd></div>}
@@ -95,13 +79,15 @@ export default async function WaterDamageLP({ searchParams }: Props) {
                 {googleRating && <div><dt>Google rating</dt><dd className="mono">{googleRating}<Stars /></dd></div>}
               </dl>
             )}
+            <figure className="lp-hero-photo">
+              <Image src="/images/jobs/rgmd-tech-water-extraction.webp" alt="RGMD technician extracting water from a commercial floor" width={971} height={682} priority sizes="(max-width: 1000px) 100vw, 640px" />
+            </figure>
           </div>
 
           <div className="form-card lp-form" id="request">
             <h2>Get Help Now</h2>
             <p className="lp-form-sub">Can&apos;t talk right now? Send your details and we&apos;ll call you back, typically within 1 hour.</p>
-            <a href={SITE.phoneHref} className="lp-form-call">Fastest response: call directly<span className="phone">{SITE.phone}</span></a>
-            <RequestForm source="water-damage-lp" />
+            <RequestForm source="water-damage-lp" variant="short" />
           </div>
         </div>
       </section>
@@ -131,26 +117,6 @@ export default async function WaterDamageLP({ searchParams }: Props) {
         </div>
       </section>
 
-      {/* ============ SERVICES ============ */}
-      <section className="section">
-        <div className="container">
-          <div className="lp-head">
-            <p className="lp-kicker">Emergency services</p>
-            <h2>Water Damage Restoration &amp; Cleanup</h2>
-            <p>Emergency water removal, extraction and structural drying for homes and businesses across Metro Detroit, plus fire and smoke damage restoration.</p>
-          </div>
-          <div className="lp-svc-grid">
-            {SERVICES.map((s) => (
-              <div key={s.name} className={`lp-svc${s.fire ? " fire" : ""}`}>
-                <h3>{s.name}</h3>
-                <p>{s.body}</p>
-                <a href={SITE.phoneHref} className="lp-svc-call"><IconPhone size={16} />Call about {s.name.toLowerCase()}</a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ============ CALL BAND ============ */}
       <section className="lp-band">
         <div className="container lp-band-inner">
@@ -159,24 +125,6 @@ export default async function WaterDamageLP({ searchParams }: Props) {
             <p>Not a call center. Available 24/7/365 across Metro Detroit.</p>
           </div>
           <a href={SITE.phoneHref} className="btn btn-xl lp-band-btn"><IconPhone size={22} /><span className="phone">{SITE.phone}</span></a>
-        </div>
-      </section>
-
-      {/* ============ FIRE ============ */}
-      <section className="lp-fire">
-        <div className="container lp-fire-grid">
-          <div>
-            <p className="lp-kicker">Fire damage restoration</p>
-            <h2>Had a Fire? Same Number. Same 24/7 Response.</h2>
-            <p>After the fire department leaves, you&apos;re usually dealing with three problems at once: fire damage, smoke and soot throughout the home, and water from putting the fire out. We handle all three.</p>
-            <CallBtn label={`Call ${SITE.phone}`} className="btn-xl" />
-          </div>
-          <ul className="lp-fire-list">
-            <li><IconCheck size={20} /><div><strong>Fire Damage Restoration</strong><span>Removal of damaged materials and repairs back to pre-loss condition.</span></div></li>
-            <li><IconCheck size={20} /><div><strong>Smoke &amp; Soot Cleanup</strong><span>Smoke travels well beyond the burned area and needs proper cleaning.</span></div></li>
-            <li><IconCheck size={20} /><div><strong>Odor Removal</strong><span>Treating lingering smoke odor in the structure and contents.</span></div></li>
-            <li><IconCheck size={20} /><div><strong>Water From Firefighting</strong><span>Extraction and drying of the water left behind.</span></div></li>
-          </ul>
         </div>
       </section>
 
@@ -235,18 +183,14 @@ export default async function WaterDamageLP({ searchParams }: Props) {
 
       {/* ============ SERVICE AREA ============ */}
       <section className="section">
-        <div className="container cols">
-          <div>
+        <div className="container">
+          <div className="lp-area">
             <p className="lp-kicker">Service area</p>
             <h2>Serving Metro Detroit</h2>
-            <p>Emergency water damage, fire damage and mold remediation across five counties.</p>
-            <p className="lp-counties">{SITE.counties.map((c) => <span key={c}>{c}</span>)}</p>
-            <p className="lp-small">Availability can vary by ZIP code, project type and current scheduling. Call with your property address to confirm we can get to you.</p>
-            <CallBtn label={`Confirm my area: ${SITE.phone}`} />
+            <p className="lp-area-sub">Emergency water damage, fire damage and mold remediation across five counties.</p>
+            <ul className="lp-counties">{SITE.counties.map((c) => <li key={c}>{c} County</li>)}</ul>
+            <CallBtn label={`Call ${SITE.phone}`} className="btn-xl" />
           </div>
-          <ul className="lp-cities">
-            {CITIES.map((c) => <li key={c.slug}>{c.name}</li>)}
-          </ul>
         </div>
       </section>
 
