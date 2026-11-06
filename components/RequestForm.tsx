@@ -10,7 +10,9 @@ const DAMAGE_TYPES = ["Water", "Mold", "Fire", "Odor", "Other"];
 
 type Status = "idle" | "sending" | "sent" | "error";
 
-export default function RequestForm({ source = "website" }: { source?: string }) {
+// variant="short" (ad landing pages): name + phone required, email optional, nothing else.
+export default function RequestForm({ source = "website", variant = "full" }: { source?: string; variant?: "full" | "short" }) {
+  const short = variant === "short";
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
 
@@ -24,9 +26,9 @@ export default function RequestForm({ source = "website" }: { source?: string })
     if (d.company) { setStatus("sent"); return; }
 
     const zip = (d.zip || "").trim();
-    if (!d.name?.trim() || !d.phone?.trim() || !/^\d{5}$/.test(zip)) {
+    if (!d.name?.trim() || !d.phone?.trim() || (!short && !/^\d{5}$/.test(zip))) {
       setStatus("error");
-      setError("Please add your name, phone number and a 5-digit ZIP code.");
+      setError(short ? "Please add your name and phone number." : "Please add your name, phone number and a 5-digit ZIP code.");
       return;
     }
     if (!EMAILJS.templateId) {
@@ -35,7 +37,7 @@ export default function RequestForm({ source = "website" }: { source?: string })
       return;
     }
 
-    const excluded = (SITE.excludedZips as readonly string[]).includes(zip);
+    const excluded = !!zip && (SITE.excludedZips as readonly string[]).includes(zip);
     try {
       await emailjs.send(
         EMAILJS.serviceId,
@@ -86,6 +88,7 @@ export default function RequestForm({ source = "website" }: { source?: string })
       <label htmlFor="rf-email">Email Address
         <input id="rf-email" name="email" type="email" autoComplete="email" />
       </label>
+      {!short && (<>
       <label htmlFor="rf-street">Street Address
         <input id="rf-street" name="street" autoComplete="address-line1" />
       </label>
@@ -114,12 +117,13 @@ export default function RequestForm({ source = "website" }: { source?: string })
       <label htmlFor="rf-desc">Project Description
         <textarea id="rf-desc" name="description" rows={4} />
       </label>
+      </>)}
       {/* Honeypot: hidden from people, filled in by bots. */}
       <label className="hp" aria-hidden="true">Leave this empty
         <input name="company" tabIndex={-1} autoComplete="off" />
       </label>
       <button type="submit" className="btn btn-call" disabled={status === "sending"}>
-        {status === "sending" ? "Sending…" : "Submit Request"}
+        {status === "sending" ? "Sending…" : short ? "Request a Callback" : "Submit Request"}
       </button>
       {status === "error" && <p className="form-error" role="alert">{error} Please call {SITE.phone}.</p>}
       <p className="note">Submission does not guarantee service availability. Our team will call you shortly after you submit, typically within 1 hour.</p>
