@@ -23,6 +23,7 @@ body:has(.lp-page) .site-header .menu-btn { display: none; }
 @keyframes lp-blink { 50% { opacity: .25; } }
 .lp-lede { font-size: 1.2rem; color: var(--on-navy); max-width: 600px; }
 .lp-lede strong { color: #fff; }
+.lp-lede-cta { margin-top: 14px; }
 .lp-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
 .lp-ctas .btn-xl { font-size: 1.6rem; min-height: 72px; padding: 0 32px; }
 .lp-pulse { animation: lp-pulse 2.2s ease-out infinite; }
@@ -143,4 +144,60 @@ body:has(.lp-page) .site-header .menu-btn { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .lp-page *, .lp-page *::before { animation: none !important; transition: none !important; }
+}
+
+/* ---------- Header on this page only ----------
+   Hide the dark top bar (its phone number repeated the header button) and
+   show "24/7 emergency response" next to the header call button instead. */
+body:has(.lp-page) .site-header .topbar { display: none; }
+body:has(.lp-page) .site-header .nav::before,
+body:has(.lp-page) .site-header .nav-row::after {
+  content: "24/7 emergency response";
+  padding-left: 18px;
+  background: radial-gradient(circle, #4fd18b 4px, rgba(79,209,139,.25) 5px, rgba(79,209,139,.25) 7px, transparent 7.5px) left center / 15px 15px no-repeat;
+  color: var(--ink); font-weight: 600; font-size: .95rem; white-space: nowrap;
+}
+body:has(.lp-page) .site-header .nav-row::after { display: none; }
+@media (max-width: 1000px) {
+  body:has(.lp-page) .site-header .nav-row::after { display: block; order: 1; margin-left: auto; font-size: .78rem; padding-left: 15px; background-size: 13px 13px; }
+  body:has(.lp-page) .site-header .brand { order: 0; }
+  body:has(.lp-page) .site-header .mobile-call { order: 2; margin-left: 0; width: auto; padding: 0 12px; gap: 6px; font: 800 .95rem var(--f-display); text-decoration: none; white-space: nowrap; }
+  body:has(.lp-page) .site-header .mobile-call::after { content: "Call Now"; }
+}
+
+/* ---------- Hero headline stays on one line ---------- */
+.lp-hero-copy { container-type: inline-size; }
+.lp-hero h1.lp-h1-fit { font-size: min(5rem, 8.7cqi); }
+.lp-hero h1.lp-h1-fit .lp-hl { white-space: nowrap; }
+
+/* ---------- Phones: call buttons say "Call Now" (still click-to-call) ---------- */
+.lp-callnow { display: none; }
+@media (max-width: 700px) {
+  .lp-page .lp-num { display: none; }
+  .lp-page .lp-callnow { display: inline; }
+  body:has(.lp-page) .sticky-call .phone { display: none; }
+  body:has(.lp-page) .sticky-call { text-transform: capitalize; }
+}
+
+/* ---------- Keep visitors on this page ----------
+   No links to other pages: the logo isn't clickable and the footer's
+   service/city link columns are hidden. Only calls and the form remain. */
+body:has(.lp-page) .site-header .brand { pointer-events: none; cursor: default; }
+body:has(.lp-page) .site-footer .footer-col:not(:first-child) { display: none; }
+body:has(.lp-page) .site-footer .footer-grid { grid-template-columns: 1fr; }
+
+/* ---------- Phones: only the header "Call Now" and the sticky bottom bar ---------- */
+@media (max-width: 700px) {
+  .lp-page .lp-callbtn, .lp-page .lp-band-btn { display: none; }
+  .lp-page .lp-inline-cta > p { margin-bottom: 0; }
+}
+
+/* Underline on "Every Second" in the hero headline */
+.lp-hero h1 .lp-u { text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .12em; }
+
+/* Form button: "Request Callback" on desktop, "Call Me Now" on phones */
+.lp-page .rf-label-narrow { display: none; }
+@media (max-width: 700px) {
+  .lp-page .rf-label-wide { display: none; }
+  .lp-page .rf-label-narrow { display: inline; }
 }
