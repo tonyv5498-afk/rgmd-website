@@ -123,10 +123,10 @@ export default function RequestForm({ source = "website", variant = "full" }: { 
         <input name="company" tabIndex={-1} autoComplete="off" />
       </label>
       <button type="submit" className="btn btn-call" disabled={status === "sending"}>
-        {status === "sending" ? "Sending…" : short ? "Request a Callback" : "Submit Request"}
+        {status === "sending" ? "Sending…" : short ? <><span className="rf-label-wide">Request Callback</span><span className="rf-label-narrow">Call Me Now</span></> : "Submit Request"}
       </button>
       {status === "error" && <p className="form-error" role="alert">{error} Please call {SITE.phone}.</p>}
-      <p className="note">Submission does not guarantee service availability. Our team will call you shortly after you submit, typically within 1 hour.</p>
+      <p className="note">{short ? "" : "Submission does not guarantee service availability. "}Our team will call you shortly after you submit, typically within 1 hour.</p>
     </form>
   );
 }
