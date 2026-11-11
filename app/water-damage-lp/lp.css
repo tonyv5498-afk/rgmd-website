@@ -215,6 +215,7 @@ body:has(.lp-page) { overflow-x: clip; }
     font-size: 1.5rem; box-shadow: 0 12px 28px -8px rgba(10,20,40,.6);
   }
   body:has(.lp-page) .sticky-call svg { width: 26px; height: 26px; }
-  body:has(.lp-page) { padding-bottom: calc(92px + env(safe-area-inset-bottom)); background: var(--navy-deep); }
+    body:has(.lp-page) { padding-bottom: 0; }
+  body:has(.lp-page) .site-footer { padding-bottom: calc(92px + env(safe-area-inset-bottom)); }
   .lp-page .lp-ctas { display: none; }
 }
