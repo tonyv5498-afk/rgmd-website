@@ -10,9 +10,9 @@ import "./lp.css";
 // Paid-ads landing page. Kept out of search results so it doesn't compete with
 // the /services/ pages. Point Google Ads final URLs here.
 export const metadata: Metadata = {
-  title: "24/7 Emergency Water Damage Restoration in Metro Detroit | Call (313) 771-3673",
+    title: "24/7 Emergency Water Damage Restoration in Metro Detroit",
   description:
-    "Flooded basement, burst pipe or sewage backup? Restoration Group of Metro Detroit answers 24/7/365. Emergency water removal, extraction and drying, plus fire and smoke damage. Call (313) 771-3673.",
+    "Flooded basement, burst pipe or sewage backup? Restoration Group of Metro Detroit answers 24/7/365. Emergency water removal, extraction and drying, plus fire and smoke damage.",
   robots: { index: false, follow: false },
   alternates: { canonical: "/water-damage-lp/" },
 };
