@@ -126,7 +126,8 @@ body:has(.lp-page) .site-header .menu-btn { display: none; }
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
   .lp-hero-grid, .lp-steps-grid, .lp-area { grid-template-columns: 1fr; }
-  .lp-area-photo { border-left: 0; border-top: 2px solid var(--ink); min-height: 0; aspect-ratio: 971 / 682; }
+  .lp-area-photo { border-left: 0; border-top: 2px solid var(--ink); min-height: 0; }
+  .lp-area-photo img { position: static; display: block; width: 100%; height: auto; }
   .lp-timeline, .lp-why, .lp-rev-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
