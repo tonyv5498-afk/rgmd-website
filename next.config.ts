@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
   // every indexed URL stays identical, and /contact → /contact/ resolves itself.
   trailingSlash: true,
 
+  // Ad landing page: /water-damage-restoration/ shows the /water-damage-lp/ page.
+  // The address bar keeps the new URL, and the old /water-damage-lp/ link still works.
+  async rewrites() {
+    return [
+      { source: "/water-damage-restoration", destination: "/water-damage-lp/" },
+    ];
+  },
+
   async redirects() {
     return [
       // Old domain: once metrodetroitrestoration.com is added to this Vercel project,
