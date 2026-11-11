@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 // Headline swaps for ad-group message match. Add ?service=<key> to the ad's final URL.
 const VARIANTS: Record<string, { eyebrow: string; h1: string; hl: string; lede: ReactNode }> = {
-  default:    { eyebrow: "Emergency Water Damage Restoration", h1: "Water Damage?", hl: "Every Second Matters.", lede: <>Every second it sits, water soaks deeper into drywall, flooring and framing, and <strong>mold can start growing within 24-48 hours.</strong></> },
+  default:    { eyebrow: "Emergency Water Damage Restoration", h1: "Water Damage?", hl: "Every Second Matters.", lede: <>Every second it sits, water soaks deeper into drywall, flooring and framing, and <strong>mold can start growing within <span className="lp-keep">24-48 hours.</span></strong></> },
   basement:   { eyebrow: "Basement Flood Cleanup", h1: "Flooded Basement?", hl: "We Answer 24/7.", lede: "Heavy rain, groundwater or a failed sump pump. We pump it out, remove damaged materials and dry the space before it spreads." },
   sewage:     { eyebrow: "Sewage Backup Cleanup", h1: "Sewage Backup?", hl: "Don't Touch It. Call Us.", lede: "Sewage is Category 3 contaminated water. It needs proper extraction, material removal and sanitizing, not a shop vac." },
   pipe:       { eyebrow: "Burst Pipe Cleanup", h1: "Burst Pipe?", hl: "Every Second Matters.", lede: "Shut off the water main if you safely can, then call. We'll extract the water and dry the structure." },
@@ -80,7 +80,7 @@ export default async function WaterDamageLP({ searchParams }: Props) {
             <p className="lp-eyebrow"><span className="lp-dot" aria-hidden="true" />{v.eyebrow} · Metro Detroit</p>
             <h1 className={v.hl.length <= 21 ? "lp-h1-fit" : undefined}>{v.h1}<br /><span className="lp-hl">{v.hl.startsWith("Every Second ") ? <><u className="lp-u">Every Second</u>{v.hl.slice(12)}</> : v.hl}</span></h1>
             <p className="lp-lede">{v.lede}</p>
-            <p className="lp-lede lp-lede-cta"><strong>Don&apos;t wait.</strong></p>
+            <p className="lp-lede lp-lede-cta"><strong>Don&apos;t wait. Get a quote now.</strong></p>
             <div className="lp-ctas">
               <CallBtn className="btn-xl lp-pulse" />
             </div>
@@ -137,9 +137,6 @@ export default async function WaterDamageLP({ searchParams }: Props) {
             ))}
           </ol>
           <p className="lp-src">24-48 hour guidance: U.S. EPA, <em>A Brief Guide to Mold, Moisture, and Your Home</em>.</p>
-          <div className="lp-inline-cta">
-            <p>Don&apos;t wait until morning. Mold won&apos;t.</p>
-          </div>
         </div>
       </section>
 
