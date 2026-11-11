@@ -21,6 +21,8 @@ const BLURBS: Record<string, string> = {
   "pipe-burst-cleanup": "Frozen or failed pipes can release hundreds of gallons before the source is found. We locate, extract, remove, and dry — fast.",
   "mold-remediation": "Containment, removal of affected materials, antimicrobial treatment, and clearance documentation following industry-standard remediation protocols.",
   "fire-smoke-damage": "Debris removal, smoke odor mitigation, soot cleaning, and content evaluation — with full coordination for insurance and reconstruction.",
+  "bat-guano-remediation": "Contained removal of bat droppings and contaminated insulation, sanitizing, and odor control — after the colony has been excluded.",
+  "rodent-droppings-cleanup": "Safe cleanup of mouse and rat droppings, nesting, and contaminated insulation, followed by disinfection and odor control.",
   "reconstruction-repairs": "After mitigation is complete, we coordinate the full rebuild — drywall, flooring, paint, and structural repairs to return your property to pre-loss condition.",
 };
 

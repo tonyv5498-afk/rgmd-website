@@ -6,7 +6,7 @@ import { SITE } from "@/data/site";
 import { EMAILJS } from "@/lib/emailjs";
 import { track } from "@/lib/gtm";
 
-const DAMAGE_TYPES = ["Water", "Mold", "Fire", "Odor", "Other"];
+const DAMAGE_TYPES = ["Water", "Mold", "Fire", "Odor", "Bat / Rodent", "Other"];
 
 type Status = "idle" | "sending" | "sent" | "error";
 
