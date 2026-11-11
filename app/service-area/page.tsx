@@ -32,9 +32,8 @@ export default function ServiceArea() {
       </section>
       <section className="section section-alt">
         <div className="container">
-          <h2>Excluded ZIP Codes</h2>
-          <p className="excluded"><strong>Service Availability Note:</strong> {SITE.name} serves select communities. Service availability may vary by ZIP code, project type, and current scheduling. We cannot guarantee coverage for all locations. Please contact us with your property address to confirm availability before scheduling. Excluded ZIP codes include the following:</p>
-          <ul className="zip-row">{SITE.excludedZips.map((z) => <li key={z}>{z}</li>)}</ul>
+          <h2>Service Availability</h2>
+          <p className="excluded"><strong>Service Availability Note:</strong> {SITE.name} serves select communities. Service availability may vary by ZIP code, project type, and current scheduling. We cannot guarantee coverage for all locations. Please contact us with your property address to confirm availability before scheduling.</p>
         </div>
       </section>
       <CtaSection heading="Need Restoration Help in Metro Detroit?" />

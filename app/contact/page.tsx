@@ -35,7 +35,7 @@ export default function Contact() {
             <h3>Hours — {SITE.hours}</h3>
             <p>Emergency response is available around the clock, including nights, weekends and holidays.</p>
             <h3>Service Area</h3>
-            <p>Serving select communities across Wayne, Oakland, Macomb, Livingston, and Washtenaw Counties. Availability varies by ZIP code. <Link href="/service-area/">See the full list and excluded ZIP codes</Link>.</p>
+            <p>Serving select communities across Wayne, Oakland, Macomb, Livingston, and Washtenaw Counties. Availability varies by ZIP code. <Link href="/service-area/">See the communities we serve</Link>.</p>
           </div>
           <div className="form-card">
             <h2>Submit a Service Request</h2>

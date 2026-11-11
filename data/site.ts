@@ -79,7 +79,7 @@ export const HOME_FAQ = [
   },
   {
     q: "What areas do you serve?",
-    a: "We serve select communities across Wayne, Oakland, Macomb, Livingston, and Washtenaw Counties in Metro Detroit. Service availability varies by ZIP code, project type, and scheduling. We do not service all Metro Detroit ZIP codes — a full list of excluded ZIP codes is available on our service area page. Contact us with your property address to confirm availability before scheduling.",
+    a: "We serve select communities across Wayne, Oakland, Macomb, Livingston, and Washtenaw Counties in Metro Detroit. Service availability varies by ZIP code, project type, and scheduling. Contact us with your property address to confirm availability before scheduling.",
   },
   {
     q: "What should I do first after discovering water damage?",

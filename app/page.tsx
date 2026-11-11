@@ -143,7 +143,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <p style={{ marginTop: 24 }}><Link href="/service-area/" className="text-link">Discover our service areas and excluded ZIP codes <IconArrow size={16} /></Link></p>
+          <p style={{ marginTop: 24 }}><Link href="/service-area/" className="text-link">Discover our service areas <IconArrow size={16} /></Link></p>
         </div>
       </section>
 
