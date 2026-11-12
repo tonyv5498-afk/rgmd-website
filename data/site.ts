@@ -35,6 +35,13 @@ export const COVERAGE_DISCLAIMER =
 export const REVIEWS = [
   {
     quote:
+      "Matt and Tony were a pleasure to work with. I was very impressed and will definitely recommend them to anyone I know who needs water removed, mold treated, etc. Great job!",
+    author: "Aaron F.",
+    source: "Google",
+    service: "Water & Mold",
+  },
+  {
+    quote:
       "Matt and Tony have been a pleasure to work with. Gerald responded to our home quickly and the process from beginning to end was seamless. They have been patient with my questions and fully explained every step of the way.",
     author: "Lauren O.",
     source: "Google",
