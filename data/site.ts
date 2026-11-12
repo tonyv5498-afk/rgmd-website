@@ -34,6 +34,26 @@ export const COVERAGE_DISCLAIMER =
 
 export const REVIEWS = [
   {
+    quote:
+      "Matt and Tony have been a pleasure to work with. Gerald responded to our home quickly and the process from beginning to end was seamless. They have been patient with my questions and fully explained every step of the way.",
+    author: "Lauren O.",
+    source: "Google",
+    service: "Restoration Project",
+  },
+  {
+    quote:
+      "I highly recommend [Restoration Group] for their quick response to my emergency call. Matthew and Tony both demonstrated professionalism and efficiency throughout the process. They guided me step-by-step.",
+    author: "Noe A.",
+    source: "Google",
+    service: "Emergency Response",
+  },
+  {
+    quote: "Very prompt and professional service! Made me feel at ease",
+    author: "Alison K.",
+    source: "Google",
+    service: "Restoration Project",
+  },
+  {
     quote: "We were very impressed with the work that [Restoration Group] did on our home. Gerald was prompt and a pleasure to work with. We are so thankful! Great work!",
     author: "Shelby H.",
     source: "Google",
