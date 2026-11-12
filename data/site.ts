@@ -34,6 +34,18 @@ export const COVERAGE_DISCLAIMER =
 
 export const REVIEWS = [
   {
+    quote: "Great service from [Restoration Group]!! Would recommend!",
+    author: "Matt J.",
+    source: "BBB",
+    service: "Restoration Project",
+  },
+  {
+    quote: "Great service! Very fast, clean, and professional. And respectful workers!",
+    author: "Hanen M.",
+    source: "BBB",
+    service: "Restoration Project",
+  },
+  {
     quote:
       "[Restoration Group] was able to test and remove the mold that was found in the crawlspace of a home I just purchased. They responded immediatly and made the process quick and seamless. Tony and the team could not have done a better job!!",
     author: "Kathrine A.",
