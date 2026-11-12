@@ -14,10 +14,10 @@ export const PHOTOS = {
 // Homepage "Recent Projects" before & after pairs.
 export const PROJECTS: Project[] = [
   {
-    title: "Basement Water Damage",
-    service: "basement-flood-cleanup",
-    before: { alt: "Flooded basement before cleanup", label: "Before" },
-    after: { alt: "Basement after drying and repairs", label: "After" },
+    title: "Bathroom Reconstruction",
+    service: "reconstruction-repairs",
+    before: { src: "/images/jobs/bathroom-before.webp", alt: "Dated green-tiled bathroom with a tub and sliding shower door before reconstruction", label: "Before", position: "60% 62%" },
+    after: { src: "/images/jobs/bathroom-after.webp", alt: "The same bathroom after reconstruction with gray tile, a walk-in shower and a glass sliding door", label: "After", position: "60% 62%" },
   },
   {
     title: "Mold Remediation, Under-Stair Framing",

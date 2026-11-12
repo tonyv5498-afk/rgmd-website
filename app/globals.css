@@ -411,3 +411,4 @@ legend { font: 700 .8rem/1.2 var(--f-display); text-transform: uppercase; letter
 .rc-card blockquote.clamped { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 8; line-clamp: 8; overflow: hidden; white-space: normal; }
 .rc-more { align-self: flex-start; margin: -6px 0 16px; padding: 0; border: 0; background: none; color: var(--dry); font: 700 .95rem var(--f-body); text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
 .rc-card { display: flex; flex-direction: column; }
+.projects .ba-pair .photo-slot { aspect-ratio: 3 / 4 !important; }
