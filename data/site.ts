@@ -35,6 +35,13 @@ export const COVERAGE_DISCLAIMER =
 export const REVIEWS = [
   {
     quote:
+      "Tony was very knowledgeable and kind. He inspected my attic and helped me to find the source of were water was getting into my attic that was causing a leak in my ceiling. Tony was able to answer all my questions in kind professional manner. I would definitely recommend Tony and [Restoration Group] to help you find the source of of unwanted leaks in your home and remediation of the damages that leak water can cause.",
+    author: "Dave K.",
+    source: "Google",
+    service: "Leak Inspection",
+  },
+  {
+    quote:
       "Seen the work they completed in my sister’s room. They cleaned it up really good after she had a three day flood. She wanted to avoid any possible mold and they did a really good job of doing that for the room. Only took an hour to get it done. Great job Tony!",
     author: "Deija C.",
     source: "Google",
