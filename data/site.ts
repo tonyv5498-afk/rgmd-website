@@ -283,6 +283,10 @@ export const HOME_FAQ = [
     a: "No. Not every leak or water problem is worth a claim. For smaller damage, the repair can cost less than your deductible, and some homeowners prefer to keep minor losses off their claim history. We can assess the damage, give you a straightforward price for the repair, and let you decide whether to pay directly or go through insurance. If the damage is larger, we document everything for your carrier. Whether to file is always your decision; your insurance agent can explain how a claim would affect your policy.",
   },
   {
+    q: "Do you work with my insurance company?",
+    a: "Yes. We work with all major insurance carriers and are a preferred vendor for several, including Allstate, American Family, Farmers, The Hanover, The Hartford, Travelers and more. Whichever carrier you have, you always have the right to choose your own contractor.",
+  },
+  {
     q: "Do you offer financing?",
     a: "Yes. Financing is available. Ask us about payment options when we review your project and price.",
   },
@@ -326,6 +330,10 @@ export const GUARANTEES = [
   { title: "18-Month Warranty", body: "On reconstruction and repair work." },
   { title: "Financing Available", body: "Ask us about payment options when we review your project." },
 ];
+// Carriers RGMD is a preferred vendor for (owner-confirmed). Text only, no carrier logos.
+export const PREFERRED_CARRIERS = ["Allstate", "American Family", "Farmers", "The Hanover", "The Hartford", "Travelers"];
+export const PREFERRED_VENDOR_LINE = `Preferred vendor for several insurance carriers, including ${PREFERRED_CARRIERS.slice(0, -1).join(", ")} and ${PREFERRED_CARRIERS[PREFERRED_CARRIERS.length - 1]}, and more.`;
+
 export const GUARANTEE_LINE = "Licensed & insured · 5-year warranty on remediation · 18-month warranty on repairs · Financing available";
 
 export const WHY_US = [

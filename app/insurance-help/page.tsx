@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { DOC_DELIVERABLES } from "@/data/site";
-import { Hero, Eyebrow, CtaSection, FaqList, Breadcrumbs } from "@/components/Blocks";
+import { Hero, Eyebrow, CtaSection, FaqList, Breadcrumbs, PreferredVendor } from "@/components/Blocks";
 import JsonLd from "@/components/JsonLd";
 import { faqSchema } from "@/lib/schema";
 
@@ -42,6 +42,11 @@ export default function InsuranceHelp() {
       <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Insurance Help" }]} />
       <Hero eyebrow="Insurance Documentation" h1="Insurance Documentation Support in Metro Detroit"
         lede="We compile the photos, moisture logs, material inventories, and written scope your insurance carrier needs to process your water, mold, or fire damage claim accurately." />
+      <section className="section carriers-section">
+        <div className="container">
+          <PreferredVendor />
+        </div>
+      </section>
       <section className="section">
         <div className="container">
           <div className="prose">

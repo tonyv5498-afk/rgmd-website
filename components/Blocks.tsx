@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE, AVAILABILITY_NOTE, COVERAGE_DISCLAIMER, DOC_DELIVERABLES, GUARANTEES } from "@/data/site";
+import { SITE, AVAILABILITY_NOTE, COVERAGE_DISCLAIMER, DOC_DELIVERABLES, GUARANTEES, PREFERRED_CARRIERS } from "@/data/site";
 import { SERVICES, serviceBySlug } from "@/data/services";
 import { IconArrow, IconCheck, IconPhone } from "@/components/Icons";
 
@@ -122,6 +122,7 @@ export function DocsSection({ heading, paragraphs, eyebrow = "Insurance Help" }:
             </ul>
           </div>
         </div>
+        <PreferredVendor />
         <p className="disclaimer"><strong>Important:</strong> {COVERAGE_DISCLAIMER}</p>
         <Link href="/insurance-help/" className="text-link">Learn about our documentation process <IconArrow size={16} /></Link>
       </div>
@@ -183,5 +184,18 @@ export function Guarantees({ className = "" }: { className?: string }) {
         </div>
       ))}
     </dl>
+  );
+}
+
+export function PreferredVendor() {
+  return (
+    <div className="carriers">
+      <p className="carriers-head">Preferred vendor for several insurance carriers, including:</p>
+      <ul className="carrier-list">
+        {PREFERRED_CARRIERS.map((c) => <li key={c}>{c}</li>)}
+        <li className="carrier-more">and more</li>
+      </ul>
+      <p className="note">You always have the right to choose your own contractor, whichever carrier you have.</p>
+    </div>
   );
 }
