@@ -35,6 +35,13 @@ export const COVERAGE_DISCLAIMER =
 export const REVIEWS = [
   {
     quote:
+      "Jeryl and Joe came to test my home and I was very pleased with their service. They were able to test and provide a yes or no result on the spot! I also liked that they covered their shoes when they entered my home and that Jeryl (I'm sorry if I'm spelling it wrong) was very thorough, conversational, and kind. I didn't have mold (thank goodness) but will definitely keep them in mind if I ever need service for this. They were great.",
+    author: "Tee M.",
+    source: "Google",
+    service: "Mold Testing",
+  },
+  {
+    quote:
       "Matt and Tony were a pleasure to work with. I was very impressed and will definitely recommend them to anyone I know who needs water removed, mold treated, etc. Great job!",
     author: "Aaron F.",
     source: "Google",
