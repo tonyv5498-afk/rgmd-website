@@ -56,6 +56,7 @@ export default function Home() {
               <li><IconCheck size={18} />Insurance Documentation Preparation and Supplement Support</li>
               <li><IconCheck size={18} />Residential and Commercial Service</li>
               <li><IconCheck size={18} />Licensed and Insured</li>
+              <li><IconCheck size={18} />IICRC-Certified Technicians</li>
               <li><IconCheck size={18} />Preferred Vendor for Several Insurance Carriers</li>
             </ul>
             <p className="note">{AVAILABILITY_NOTE}</p>

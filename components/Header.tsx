@@ -15,7 +15,7 @@ export default function Header() {
     <header className="site-header">
       <div className="topbar">
         <div className="container topbar-inner">
-          <span><span className="live-dot" aria-hidden="true" />24/7 emergency response<span className="topbar-extra"> · Licensed &amp; insured</span></span>
+          <span><span className="live-dot" aria-hidden="true" />24/7 emergency response<span className="topbar-extra"> · Licensed &amp; insured · IICRC certified</span></span>
           <a href={SITE.phoneHref} className="topbar-phone phone">{SITE.phone}</a>
         </div>
       </div>

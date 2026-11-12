@@ -49,7 +49,7 @@ export function Hero({ eyebrow, h1, lede, children }: { eyebrow?: string; h1: st
           <dl className="ticket-fields">
             <div><dt>Phone</dt><dd><a href={SITE.phoneHref} className="phone ticket-phone">{SITE.phone}</a></dd></div>
             <div><dt>Hours</dt><dd>{SITE.hours}</dd></div>
-            <div><dt>Credentials</dt><dd>Licensed &amp; insured</dd></div>
+            <div><dt>Credentials</dt><dd>Licensed &amp; insured · IICRC-certified technicians</dd></div>
             {eyebrow?.includes("County") ? (
               <div><dt>Service area</dt><dd>{eyebrow}</dd></div>
             ) : (

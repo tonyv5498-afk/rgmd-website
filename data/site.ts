@@ -334,7 +334,7 @@ export const GUARANTEES = [
 export const PREFERRED_CARRIERS = ["Allstate", "American Family", "Farmers", "The Hanover", "The Hartford", "Travelers"];
 export const PREFERRED_VENDOR_LINE = `Preferred vendor for several insurance carriers, including ${PREFERRED_CARRIERS.slice(0, -1).join(", ")} and ${PREFERRED_CARRIERS[PREFERRED_CARRIERS.length - 1]}, and more.`;
 
-export const GUARANTEE_LINE = "Licensed & insured · 5-year warranty on remediation · 18-month warranty on repairs · Financing available";
+export const GUARANTEE_LINE = "Licensed & insured · IICRC-certified technicians · 5-year warranty on remediation · 18-month warranty on repairs · Financing available";
 
 export const WHY_US = [
   { title: "Operator-Led Response", body: "When you call, you're dealing with someone who understands the work — not a dispatcher routing your job to an unknown subcontractor." },
