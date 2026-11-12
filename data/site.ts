@@ -35,10 +35,17 @@ export const COVERAGE_DISCLAIMER =
 export const REVIEWS = [
   {
     quote:
+      "Restoration Group of Metro Detroit was excellent. They were very prompt with a quote and were able to take care of our problem very quickly. I would recommend them to anybody in the area",
+    author: "Joel B.",
+    source: "Google",
+    service: "Restoration Project",
+  },
+  {
+    quote:
       "I couldn't be happier with Restoration Group of Metro Detroit. They not only do a great job, they follow through a full year after their work is completed to be sure that everything is okay. I highly recommend Tony, who is competent, polite, efficient and provides exceptional service.",
     author: "Christa G.",
     source: "Google",
-    service: "Mold Remediation & Follow-Up",
+    service: "Restoration Project",
   },
   {
     quote: "Great service from [Restoration Group]!! Would recommend!",
