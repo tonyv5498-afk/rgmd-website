@@ -35,6 +35,20 @@ export const COVERAGE_DISCLAIMER =
 export const REVIEWS = [
   {
     quote:
+      "[Restoration Group] was able to test and remove the mold that was found in the crawlspace of a home I just purchased. They responded immediatly and made the process quick and seamless. Tony and the team could not have done a better job!!",
+    author: "Kathrine A.",
+    source: "BBB",
+    service: "Crawlspace Mold Remediation",
+  },
+  {
+    quote:
+      "[Tony] and the team quickly assessed my flooding damage and were able to do a complete clean up and remodel in a matter of days 10/10 recommend [Restoration Group].",
+    author: "Brian H.",
+    source: "BBB",
+    service: "Flood Cleanup & Remodel",
+  },
+  {
+    quote:
       "My appraiser suspected mold in the attic. I called [Restoration Group] to see if they came to my area. They did and were out the next day. They did a free sample swipe for mold in my attic. A couple days later they were out within I believe an hour and half the spraying to get rid of it was done. They came back out to get theyre fan for the drying process. I got a green means clean no more mold test done again. Speedy and very informative. I recommend [Restoration Group] for your needs.",
     author: "Rhonda G.",
     source: "BBB",
