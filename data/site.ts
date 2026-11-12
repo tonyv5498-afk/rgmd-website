@@ -34,6 +34,19 @@ export const COVERAGE_DISCLAIMER =
 
 export const REVIEWS = [
   {
+    quote:
+      "I couldn’t be happier with [Restoration Group]. They are prompt, professional, and thorough. They quickly assessed and walked me through what my project would entail. The communication was excellent, and they made the whole process smooth and stress-free. Highly recommend them for their expertise.",
+    author: "Eran H.",
+    source: "Google",
+    service: "Restoration Project",
+  },
+  {
+    quote: "Highly recommend! Everyone I’ve worked with has been very professional and so helpful.",
+    author: "Joseph F.",
+    source: "Google",
+    service: "Restoration Project",
+  },
+  {
     quote: "Called [Restoration Group], ended up not needing restoration work but they were understanding and happy to refer me to get the help I needed. Great experience!",
     author: "Jacob D.",
     source: "Google",
