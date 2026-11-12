@@ -34,6 +34,18 @@ export const COVERAGE_DISCLAIMER =
 
 export const REVIEWS = [
   {
+    quote: "Very detail oriented company! Great work as they prepared the job site and got rid of any mold and damage!",
+    author: "Kassem E.",
+    source: "Google",
+    service: "Mold Remediation",
+  },
+  {
+    quote: "…Professional, fast, and reliable service. Tony made the entire process seamless and stress-free. Highly recommend!",
+    author: "Brian F.",
+    source: "Google",
+    service: "Restoration Project",
+  },
+  {
     quote:
       "Jeryl and Joe came to test my home and I was very pleased with their service. They were able to test and provide a yes or no result on the spot! I also liked that they covered their shoes when they entered my home and that Jeryl (I'm sorry if I'm spelling it wrong) was very thorough, conversational, and kind. I didn't have mold (thank goodness) but will definitely keep them in mind if I ever need service for this. They were great.",
     author: "Tee M.",
