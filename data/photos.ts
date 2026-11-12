@@ -28,8 +28,8 @@ export const PROJECTS: Project[] = [
   {
     title: "Water Damage Reconstruction",
     service: "reconstruction-repairs",
-    before: { alt: "Room opened up after water damage", label: "Before" },
-    after: { alt: "Room after reconstruction", label: "After" },
+    before: { src: "/images/jobs/recon-window-wall-before.webp", alt: "Wall below a row of windows opened to the studs and block after water damage, with a dehumidifier drying the room", label: "Before", position: "50% 60%" },
+    after: { src: "/images/jobs/recon-window-wall-after.webp", alt: "The same wall below the windows rebuilt with new drywall and primed", label: "After", position: "50% 60%" },
   },
 ];
 
@@ -46,6 +46,7 @@ export const SERVICE_PHOTOS: Partial<Record<string, Photo>> = {
 // One before & after pair per service page. Services not listed show placeholders.
 export const SERVICE_PROJECTS: Partial<Record<string, Project>> = {
   "mold-remediation": PROJECTS[1],
+  "reconstruction-repairs": PROJECTS[2],
 };
 
 export function serviceProject(slug: string, name: string): Project {
