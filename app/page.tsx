@@ -4,6 +4,8 @@ import { SITE, REVIEWS, HOME_FAQ, WHY_US, WATER_PROCESS, WATER_SITUATIONS, COMME
 import { COUNTY_ORDER, citiesByCounty } from "@/data/cities";
 import { Eyebrow, Steps, ServiceCards, DocsSection, CtaSection, FaqList, CallBand, CallButton, Guarantees } from "@/components/Blocks";
 import MoistureMap from "@/components/MoistureMap";
+import { PhotoSlot, BeforeAfter } from "@/components/PhotoSlot";
+import { PHOTOS, PROJECTS } from "@/data/photos";
 import JobPhoto from "@/components/JobPhoto";
 import { IconArrow, IconCheck, Stars, IconStar } from "@/components/Icons";
 import RequestForm from "@/components/RequestForm";
@@ -20,6 +22,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const { yearsExperience, projectsCompleted, googleRating } = SITE.stats;
+  const featured = [...REVIEWS].sort((x, y) => y.quote.length - x.quote.length)[0];
+  const others = REVIEWS.filter((r) => r !== featured);
   const stats = [
     yearsExperience != null && { n: `${yearsExperience}+`, l: "Years of Experience" },
     projectsCompleted != null && { n: `${projectsCompleted.toLocaleString("en-US")}+`, l: "Projects Completed" },
@@ -81,6 +85,16 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section section-alt">
+        <div className="container">
+          <h2>Recent Projects</h2>
+          <p className="prose">Before and after photos from RGMD jobs across Metro Detroit.</p>
+          <div className="projects">
+            {PROJECTS.map((pr) => <BeforeAfter key={pr.title} project={pr} />)}
+          </div>
+        </div>
+      </section>
+
       <CallBand text="Get Started" />
 
       <section className="section">
@@ -93,6 +107,7 @@ export default function Home() {
             <ul className="tick-list">{WATER_SITUATIONS.map((s) => <li key={s}>{s}</li>)}</ul>
           </div>
           <div>
+            <PhotoSlot photo={PHOTOS.waterResponse} ratio="16 / 10" className="section-photo" />
             <h3>Avoid Secondary Damage</h3>
             <p>Water doesn’t stop moving once it enters a structure. Within hours, moisture migrates into walls, subfloor, and insulation — creating conditions for mold growth, structural weakening, and odor that compounds the original loss. Fast extraction and proper drying aren’t optional steps, they’re the difference between a manageable claim and a major rebuild. We respond quickly, assess accurately, and start mitigation before secondary damage turns a water call into a mold job.</p>
             <CallButton label="Call Now -" />
@@ -135,6 +150,7 @@ export default function Home() {
             <p>Commercial restoration requires a different approach than residential. Multiple stakeholders, active tenants, ongoing operations, and commercial insurance policies all add layers that a standard residential mitigation crew isn’t equipped to manage. We communicate directly with property managers, building owners, and adjusters — keeping everyone aligned on scope, timeline, and documentation from first response through project close.</p>
           </div>
           <div>
+            <PhotoSlot photo={PHOTOS.commercial} ratio="16 / 10" className="section-photo" />
             <h3>We Work With:</h3>
             <ul className="tick-list">{COMMERCIAL_CLIENTS.map((c) => <li key={c}>{c}</li>)}</ul>
             <Link href="/commercial-mitigation-plan/" className="btn btn-ghost">Set Up Your Property for Rapid Response</Link>
@@ -172,11 +188,34 @@ export default function Home() {
 
       <section className="section section-alt">
         <div className="container">
-          <Eyebrow>What Clients Say</Eyebrow>
           <h2>Reviews &amp; Testimonials</h2>
           <p className="prose">Verified reviews from homeowners and property managers across Metro Detroit. Every review is from a real client — no scripts, no incentivized feedback.</p>
+          <div className="review-layout">
+            <aside className="rating-card">
+              <div className="ticket-head"><span className="ticket-title">Client rating</span><span className="ticket-tag">Google</span></div>
+              <div className="rating-body">
+                <p className="rating-num">{googleRating?.toFixed(1)}</p>
+                <Stars />
+                <p className="rating-label">Star average on Google</p>
+              </div>
+              <dl className="ticket-fields">
+                <div><dt>Experience</dt><dd>{yearsExperience}+ years</dd></div>
+                <div><dt>Projects completed</dt><dd>{projectsCompleted?.toLocaleString()}+</dd></div>
+              </dl>
+            </aside>
+            {featured && (
+              <figure className="review review-featured">
+                <PhotoSlot photo={PHOTOS.featuredReview} ratio="16 / 9" className="review-photo" />
+                <div className="review-body">
+                  <Stars />
+                  <blockquote>“{featured.quote}”</blockquote>
+                  <figcaption>{featured.author} — {featured.source}<span>{featured.service}</span></figcaption>
+                </div>
+              </figure>
+            )}
+          </div>
           <div className="reviews">
-            {REVIEWS.map((r) => (
+            {others.map((r) => (
               <figure key={r.author} className="review">
                 <Stars />
                 <blockquote>“{r.quote}”</blockquote>

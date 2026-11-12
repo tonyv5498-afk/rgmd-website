@@ -51,3 +51,10 @@ Set the container ID in Vercel → Project → Settings → Environment Variable
 Data layer events the site sends (no personal details):
 - `phone_click`: any tap on the phone number. `click_location` is sticky_bar, header, hero, footer or page; also `page_path`.
 - `form_submit`: a service request sent successfully. Includes `form_source` (home, contact, commercial-plan…), `damage_type`, `page_path`.
+
+## Photos
+
+Every photo spot reads from `data/photos.ts`. Put images in `public/images/jobs/` and set `src` on the matching entry:
+- `PHOTOS.waterResponse`, `PHOTOS.commercial`, `PHOTOS.featuredReview`: single homepage photos
+- `PROJECTS`: the three homepage before & after pairs
+- `SERVICE_PROJECTS["<service-slug>"]`: the before & after pair on each service page

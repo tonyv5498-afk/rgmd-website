@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { BeforeAfter } from "@/components/PhotoSlot";
+import { serviceProject } from "@/data/photos";
 import { SERVICES, serviceBySlug } from "@/data/services";
 import { Hero, Eyebrow, Paragraphs, Steps, ServiceCards, DocsSection, CtaSection, Breadcrumbs, CallBand, Guarantees } from "@/components/Blocks";
 import JsonLd from "@/components/JsonLd";
@@ -47,6 +49,15 @@ export default async function ServicePage({ params }: Props) {
           <h2>{s.processHeading ?? "Our Process"}</h2>
           <p className="prose">{s.processIntro}</p>
           <Steps steps={s.steps} />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <h2>Before &amp; After</h2>
+          <div className="projects single">
+            <BeforeAfter project={serviceProject(s.slug, s.name)} link={false} />
+          </div>
         </div>
       </section>
 
