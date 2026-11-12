@@ -34,6 +34,12 @@ export const COVERAGE_DISCLAIMER =
 
 export const REVIEWS = [
   {
+    quote: "We were very impressed with the work that [Restoration Group] did on our home. Gerald was prompt and a pleasure to work with. We are so thankful! Great work!",
+    author: "Shelby H.",
+    source: "Google",
+    service: "Restoration Project",
+  },
+  {
     quote:
       "I couldn’t be happier with [Restoration Group]. They are prompt, professional, and thorough. They quickly assessed and walked me through what my project would entail. The communication was excellent, and they made the whole process smooth and stress-free. Highly recommend them for their expertise.",
     author: "Eran H.",
