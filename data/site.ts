@@ -38,7 +38,7 @@ export const REVIEWS = [
       "A great, attentive company. They came out that week to give us an estimate and scheduled for the next week. They explained the process clearly. I got the results the very next week in an easy to read format. Highly recommended.",
     author: "Paula L.",
     source: "Google",
-    service: "Testing & Remediation",
+    service: "Inspection & Testing",
   },
   {
     quote:
