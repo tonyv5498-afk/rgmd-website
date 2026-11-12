@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { BeforeAfter } from "@/components/PhotoSlot";
-import { serviceProject } from "@/data/photos";
+import { BeforeAfter, PhotoSlot } from "@/components/PhotoSlot";
+import { serviceProject, SERVICE_PHOTOS } from "@/data/photos";
 import { SERVICES, serviceBySlug } from "@/data/services";
 import { Hero, Eyebrow, Paragraphs, Steps, ServiceCards, DocsSection, CtaSection, Breadcrumbs, CallBand, Guarantees } from "@/components/Blocks";
 import JsonLd from "@/components/JsonLd";
@@ -37,6 +37,7 @@ export default async function ServicePage({ params }: Props) {
             <Paragraphs items={s.intro} />
           </div>
           <div>
+            {SERVICE_PHOTOS[s.slug] && <PhotoSlot photo={SERVICE_PHOTOS[s.slug]!} ratio="4 / 3" className="section-photo" />}
             <h3>{s.listHeading}:</h3>
             <ul className="tick-list one-col">{s.list.map((i) => <li key={i}>{i}</li>)}</ul>
           </div>

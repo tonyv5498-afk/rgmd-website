@@ -33,6 +33,16 @@ export const PROJECTS: Project[] = [
   },
 ];
 
+// Optional main photo shown in the opening section of a service page.
+export const SERVICE_PHOTOS: Partial<Record<string, Photo>> = {
+  "mold-remediation": {
+    src: "/images/jobs/mold-crawlspace-crew.webp",
+    alt: "RGMD technician in a Tyvek suit and full-face respirator treating mold on crawlspace framing",
+    label: "Crew in a crawlspace",
+    position: "55% 40%",
+  },
+};
+
 // One before & after pair per service page. Services not listed show placeholders.
 export const SERVICE_PROJECTS: Partial<Record<string, Project>> = {
   "mold-remediation": PROJECTS[1],
