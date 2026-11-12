@@ -34,6 +34,12 @@ export const COVERAGE_DISCLAIMER =
 
 export const REVIEWS = [
   {
+    quote: "Called [Restoration Group], ended up not needing restoration work but they were understanding and happy to refer me to get the help I needed. Great experience!",
+    author: "Jacob D.",
+    source: "Google",
+    service: "Free Assessment & Referral",
+  },
+  {
     quote: "Used them recently. They did an excellent job and really explained every step to us. Very professional. Would recommend them.",
     author: "Susan G.",
     source: "Facebook",
