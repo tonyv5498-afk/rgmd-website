@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SERVICES, serviceBySlug } from "@/data/services";
-import { Hero, Eyebrow, Paragraphs, Steps, ServiceCards, DocsSection, CtaSection, Breadcrumbs, CallBand } from "@/components/Blocks";
+import { Hero, Eyebrow, Paragraphs, Steps, ServiceCards, DocsSection, CtaSection, Breadcrumbs, CallBand, Guarantees } from "@/components/Blocks";
 import JsonLd from "@/components/JsonLd";
 import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
 
@@ -69,6 +69,13 @@ export default async function ServicePage({ params }: Props) {
           <Eyebrow>Related Services</Eyebrow>
           <h2>Other Services You May Need</h2>
           <ServiceCards slugs={s.related} />
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <div className="container">
+          <h2>Warranty &amp; Financing</h2>
+          <Guarantees />
         </div>
       </section>
 

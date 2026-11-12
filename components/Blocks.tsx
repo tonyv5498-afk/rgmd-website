@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE, AVAILABILITY_NOTE, COVERAGE_DISCLAIMER, DOC_DELIVERABLES } from "@/data/site";
+import { SITE, AVAILABILITY_NOTE, COVERAGE_DISCLAIMER, DOC_DELIVERABLES, GUARANTEES } from "@/data/site";
 import { SERVICES, serviceBySlug } from "@/data/services";
 import { IconArrow, IconCheck, IconPhone } from "@/components/Icons";
 
@@ -169,5 +169,18 @@ export function Breadcrumbs({ items }: { items: { name: string; path?: string }[
         ))}
       </div>
     </nav>
+  );
+}
+
+export function Guarantees({ className = "" }: { className?: string }) {
+  return (
+    <dl className={`guarantees ${className}`}>
+      {GUARANTEES.map((g) => (
+        <div key={g.title} className="guarantee">
+          <dt><span className="doc-box" aria-hidden="true"><IconCheck size={16} /></span>{g.title}</dt>
+          <dd>{g.body}</dd>
+        </div>
+      ))}
+    </dl>
   );
 }

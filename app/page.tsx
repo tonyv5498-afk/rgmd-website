@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE, REVIEWS, HOME_FAQ, WHY_US, WATER_PROCESS, WATER_SITUATIONS, COMMERCIAL_CLIENTS, AVAILABILITY_NOTE } from "@/data/site";
 import { COUNTY_ORDER, citiesByCounty } from "@/data/cities";
-import { Eyebrow, Steps, ServiceCards, DocsSection, CtaSection, FaqList, CallBand, CallButton } from "@/components/Blocks";
+import { Eyebrow, Steps, ServiceCards, DocsSection, CtaSection, FaqList, CallBand, CallButton, Guarantees } from "@/components/Blocks";
 import MoistureMap from "@/components/MoistureMap";
 import JobPhoto from "@/components/JobPhoto";
 import { IconArrow, IconCheck, Stars, IconStar } from "@/components/Icons";
@@ -97,6 +97,18 @@ export default function Home() {
             <p>Water doesn’t stop moving once it enters a structure. Within hours, moisture migrates into walls, subfloor, and insulation — creating conditions for mold growth, structural weakening, and odor that compounds the original loss. Fast extraction and proper drying aren’t optional steps, they’re the difference between a manageable claim and a major rebuild. We respond quickly, assess accurately, and start mitigation before secondary damage turns a water call into a mold job.</p>
             <CallButton label="Call Now -" />
           </div>
+        </div>
+      </section>
+
+      <section className="section section-alt minor">
+        <div className="container cols">
+          <div className="prose">
+            <h2>Not Every Leak Needs an Insurance Claim</h2>
+            <p>A dripping supply line, a small leak under the sink, a stained ceiling below a bathroom — plenty of water damage is real but small. For damage like that, the repair can cost less than your deductible, and some homeowners would rather keep minor losses off their claim history.</p>
+            <p>We work directly with homeowners to fix it. We find the source, dry what’s wet, replace what can’t be saved, and give you a straightforward price up front so you can decide whether to pay directly or go through insurance.</p>
+            <Link href="/services/minor-water-damage-repairs/" className="text-link">Learn about minor water damage repairs <IconArrow size={16} /></Link>
+          </div>
+          <Guarantees />
         </div>
       </section>
 

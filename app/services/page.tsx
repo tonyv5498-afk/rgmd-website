@@ -23,6 +23,7 @@ const BLURBS: Record<string, string> = {
   "fire-smoke-damage": "Debris removal, smoke odor mitigation, soot cleaning, and content evaluation — with full coordination for insurance and reconstruction.",
   "bat-guano-remediation": "Contained removal of bat droppings and contaminated insulation, sanitizing, and odor control — after the colony has been excluded.",
   "rodent-droppings-cleanup": "Safe cleanup of mouse and rat droppings, nesting, and contaminated insulation, followed by disinfection and odor control.",
+  "minor-water-damage-repairs": "Small leak or minor damage? We find the source, dry it, and repair it at a straightforward price — no insurance claim required.",
   "reconstruction-repairs": "After mitigation is complete, we coordinate the full rebuild — drywall, flooring, paint, and structural repairs to return your property to pre-loss condition.",
 };
 

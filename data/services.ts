@@ -543,6 +543,53 @@ export const SERVICES: Service[] = [
     h2Cta: "Need Rodent Dropping Cleanup in Metro Detroit?",
     ctaText: "Call now or submit a service request and we’ll confirm availability for your home or business.",
   },
+  {
+    slug: "minor-water-damage-repairs",
+    name: "Minor Water Damage Repairs",
+    title: "Minor Water Damage Repairs in Metro Detroit",
+    description: "Small leak or minor water damage in Metro Detroit? We find the source, dry it, and repair it at a straightforward price — no insurance claim required. Call (313) 771-3673.",
+    eyebrow: "Minor Repairs",
+    h1: "Minor Water Damage Repairs in Metro Detroit",
+    lede: "Not every leak needs an insurance claim. We work directly with homeowners to find the source, dry the area, and repair minor water damage at a straightforward price.",
+    summary: "Small leaks and minor water damage don't always warrant an insurance claim. We find the source, dry what's wet, replace what can't be saved, and give you a clear price up front so you can decide how to pay.",
+    h2Intro: "When a Claim Doesn't Make Sense",
+    intro: [
+      "Plenty of water damage is real but small: a slow leak under a sink, a failed supply line behind the toilet, a stained ceiling below a bathroom, a damp corner of the basement. For damage like that, the repair can cost less than your insurance deductible, and some homeowners would rather keep minor losses off their claim history.",
+      "We work directly with homeowners on these jobs. We locate the source, confirm with moisture readings how far the water traveled, dry what can be dried, replace the drywall, trim, or flooring that can't be saved, and finish the repair. You get a straightforward price before we start, and you decide whether to pay directly or go through insurance. If we find the damage is bigger than it looked, we'll tell you and document it for a claim.",
+    ],
+    listHeading: "Minor Water Damage We Repair",
+    list: [
+      "Leaks under kitchen and bathroom sinks", "Failed toilet, dishwasher, or fridge supply lines",
+      "Ceiling stains below bathrooms and showers", "Small basement seepage areas and wet drywall",
+      "Damaged baseboards, trim, and cabinet bases", "Water-damaged flooring in a single room",
+      "Window and door leaks with wall damage", "Drywall patching and repainting after a leak",
+    ],
+    processIntro: "Find it, dry it, fix it — with a clear price before any work starts.",
+    steps: [
+      { title: "Find the Source", body: "We locate where the water is coming from so the repair actually holds." },
+      { title: "Measure the Damage", body: "Moisture readings show how far the water traveled, including behind walls and under floors." },
+      { title: "Straightforward Price", body: "You get a clear price for the repair before work starts, and you decide whether to pay directly or file a claim." },
+      { title: "Dry & Remove", body: "Wet areas are dried, and materials that can't be saved are removed so mold doesn't get a start." },
+      { title: "Repair & Finish", body: "Drywall, trim, flooring, and paint are repaired so the room is back to normal." },
+    ],
+    eyebrowUrgency: "Why Fix It Now",
+    h2Urgency: "Small Leaks Turn Into Big Repairs",
+    urgency: [
+      "Minor water damage rarely stays minor. A slow leak keeps feeding moisture into drywall, subfloor, and cabinets, and within a few days that moisture can support mold growth. What starts as a stain can become a remediation job.",
+      "Fixing it early keeps the scope small, keeps the cost down, and keeps the decision about insurance in your hands.",
+    ],
+    urgencyList: [
+      "Slow leaks keep wetting materials until the source is fixed", "Wet drywall and subfloor can grow mold within days",
+      "Small repairs can cost less than a typical deductible", "Early repairs keep the scope and the cost small",
+    ],
+    h2Docs: "Documentation If You Need It Later",
+    docs: [
+      "Even on jobs you pay for directly, we photograph the damage and the repair and keep a written record of the work. If the damage turns out to be larger than expected, that documentation is ready for your insurance carrier.",
+    ],
+    related: ["water-damage-restoration", "pipe-burst-cleanup", "reconstruction-repairs"],
+    h2Cta: "Have a Leak or Minor Water Damage?",
+    ctaText: "Call now or submit a service request and we’ll take a look, give you a straightforward price, and confirm availability for your home.",
+  },
 ];
 
 export const serviceBySlug = (slug: string) => SERVICES.find((s) => s.slug === slug);

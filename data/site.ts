@@ -58,6 +58,18 @@ export const REVIEWS = [
 
 export const HOME_FAQ = [
   {
+    q: "Do I have to file an insurance claim for water damage?",
+    a: "No. Not every leak or water problem is worth a claim. For smaller damage, the repair can cost less than your deductible, and some homeowners prefer to keep minor losses off their claim history. We can assess the damage, give you a straightforward price for the repair, and let you decide whether to pay directly or go through insurance. If the damage is larger, we document everything for your carrier. Whether to file is always your decision; your insurance agent can explain how a claim would affect your policy.",
+  },
+  {
+    q: "Do you offer financing?",
+    a: "Yes. Financing is available. Ask us about payment options when we review your project and price.",
+  },
+  {
+    q: "Is your work warrantied?",
+    a: "Yes. Our remediation work (water, mold, fire, odor, and bat and rodent cleanup) carries a 5-year warranty, and reconstruction and repair work carries an 18-month warranty.",
+  },
+  {
     q: "How fast can you respond to water damage in Metro Detroit?",
     a: "We typically respond to water damage calls within 1–2 hours of first contact. When you call, you’ll speak directly with someone who can confirm availability for your location and project type, give you an honest assessment of timing, and get the process started immediately. We don’t route calls through a national dispatch center — you’re talking to the team that will actually show up.",
   },
@@ -86,6 +98,14 @@ export const HOME_FAQ = [
     a: "Act fast — every hour matters. First, stop the source if it’s safe to do so. Second, turn off electricity to any affected areas if there’s a risk of contact with water. Third, move valuables, documents, electronics, and anything irreplaceable out of the wet area. Fourth, photograph everything before moving or removing anything — your own documentation matters. Fifth, call your insurance company to report the loss. Sixth, contact a restoration professional as quickly as possible. The sooner extraction and drying begin, the less secondary damage occurs. Our team of restoration experts is standing by and available for a call 24/7/365 at (313) 771-3673.",
   },
 ];
+
+// Warranty and financing terms as confirmed by the owner. Keep wording consistent everywhere.
+export const GUARANTEES = [
+  { title: "5-Year Warranty", body: "On our remediation work: water, mold, fire, odor, and bat and rodent cleanup." },
+  { title: "18-Month Warranty", body: "On reconstruction and repair work." },
+  { title: "Financing Available", body: "Ask us about payment options when we review your project." },
+];
+export const GUARANTEE_LINE = "5-year warranty on remediation · 18-month warranty on repairs · Financing available";
 
 export const WHY_US = [
   { title: "Operator-Led Response", body: "When you call, you're dealing with someone who understands the work — not a dispatcher routing your job to an unknown subcontractor." },

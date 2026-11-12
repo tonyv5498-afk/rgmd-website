@@ -339,3 +339,14 @@ legend { font: 700 .8rem/1.2 var(--f-display); text-transform: uppercase; letter
   body { padding-bottom: 60px; }
 }
 .request-form .chip-opt > input { flex: none; }
+
+/* Warranty & financing */
+.guarantees { margin: 0; border-top: 2px solid var(--ink); align-self: start; }
+.guarantee { padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.guarantee dt { display: flex; align-items: center; gap: 12px; font: 800 1.3rem/1.15 var(--f-display); font-stretch: 85%; color: var(--ink); margin-bottom: 4px; }
+.guarantee dd { margin: 0 0 0 34px; color: var(--ink-2); }
+.section > .container:not(.cols) > .guarantees { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 40px; margin-top: 24px; }
+@media (max-width: 800px) { .section > .container:not(.cols) > .guarantees { grid-template-columns: 1fr; } }
+.guarantees.compact .guarantee { padding: 10px 0; }
+.guarantees.compact dt { font-size: 1.1rem; }
+.footer-guarantee { color: #fff; font-weight: 600; }

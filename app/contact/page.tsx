@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "@/data/site";
-import { Breadcrumbs, Eyebrow } from "@/components/Blocks";
+import { Breadcrumbs, Eyebrow, Guarantees } from "@/components/Blocks";
 import RequestForm from "@/components/RequestForm";
 
 export const metadata: Metadata = {
@@ -34,6 +34,8 @@ export default function Contact() {
             <p>For non-emergency inquiries, documentation requests, and general questions.</p>
             <h3>Hours — {SITE.hours}</h3>
             <p>Emergency response is available around the clock, including nights, weekends and holidays.</p>
+            <h3>Warranty &amp; Financing</h3>
+            <Guarantees className="compact" />
             <h3>Service Area</h3>
             <p>Serving select communities across Wayne, Oakland, Macomb, Livingston, and Washtenaw Counties. Availability varies by ZIP code. <Link href="/service-area/">See the communities we serve</Link>.</p>
           </div>
