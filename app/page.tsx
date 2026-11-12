@@ -24,7 +24,15 @@ export const metadata: Metadata = {
 export default function Home() {
   const { yearsExperience, projectsCompleted, googleRating } = SITE.stats;
   const featured = [...REVIEWS].sort((x, y) => y.quote.length - x.quote.length)[0];
-  const others = REVIEWS.filter((r) => r !== featured);
+  // Mix sources in the carousel: spread each source's reviews evenly across the whole run,
+  // so Google, BBB, Facebook and direct reviews alternate instead of clumping.
+  const bySource = new Map<string, typeof REVIEWS>();
+  for (const r of REVIEWS) if (r !== featured) bySource.set(r.source || "Direct", [...(bySource.get(r.source || "Direct") ?? []), r]);
+  const order = ["Google", "BBB", "Facebook", "Direct", "Yelp"];
+  const others = [...bySource.entries()]
+    .flatMap(([src, list]) => list.map((r, i) => ({ r, k: (i + 0.5) / list.length, o: order.indexOf(src) })))
+    .sort((a, b) => a.k - b.k || a.o - b.o)
+    .map((x) => x.r);
   const stats = [
     yearsExperience != null && { n: `${yearsExperience}+`, l: "Years of Experience" },
     projectsCompleted != null && { n: `${projectsCompleted.toLocaleString("en-US")}+`, l: "Projects Completed" },
