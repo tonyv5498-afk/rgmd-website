@@ -412,3 +412,5 @@ legend { font: 700 .8rem/1.2 var(--f-display); text-transform: uppercase; letter
 .rc-more { align-self: flex-start; margin: -6px 0 16px; padding: 0; border: 0; background: none; color: var(--dry); font: 700 .95rem var(--f-body); text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
 .rc-card { display: flex; flex-direction: column; }
 .projects .ba-pair .photo-slot { aspect-ratio: 3 / 4 !important; }
+
+@media (max-width: 420px) { .topbar-extra { display: none; } }

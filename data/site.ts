@@ -326,7 +326,7 @@ export const GUARANTEES = [
   { title: "18-Month Warranty", body: "On reconstruction and repair work." },
   { title: "Financing Available", body: "Ask us about payment options when we review your project." },
 ];
-export const GUARANTEE_LINE = "5-year warranty on remediation · 18-month warranty on repairs · Financing available";
+export const GUARANTEE_LINE = "Licensed & insured · 5-year warranty on remediation · 18-month warranty on repairs · Financing available";
 
 export const WHY_US = [
   { title: "Operator-Led Response", body: "When you call, you're dealing with someone who understands the work — not a dispatcher routing your job to an unknown subcontractor." },

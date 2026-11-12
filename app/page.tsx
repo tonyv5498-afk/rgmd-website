@@ -55,6 +55,7 @@ export default function Home() {
               <li><IconCheck size={18} />Full Service - Water, Mold, Fire, Odor and Reconstruction</li>
               <li><IconCheck size={18} />Insurance Documentation Preparation and Supplement Support</li>
               <li><IconCheck size={18} />Residential and Commercial Service</li>
+              <li><IconCheck size={18} />Licensed and Insured</li>
             </ul>
             <p className="note">{AVAILABILITY_NOTE}</p>
           </div>
