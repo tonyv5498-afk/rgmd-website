@@ -35,6 +35,20 @@ export const COVERAGE_DISCLAIMER =
 export const REVIEWS = [
   {
     quote:
+      "Seen the work they completed in my sister’s room. They cleaned it up really good after she had a three day flood. She wanted to avoid any possible mold and they did a really good job of doing that for the room. Only took an hour to get it done. Great job Tony!",
+    author: "Deija C.",
+    source: "Google",
+    service: "Flood Cleanup",
+  },
+  {
+    quote:
+      "I have been dealing with contractors for nine months and have often felt frustrated by their lack of transparency. However, when Tony came to my home to assess for mold, he was not only very professional but also completely honest. Honesty is key, people. I would recommend Tony to anyone who has concerns. Thank you Tony",
+    author: "Bob B.",
+    source: "Google",
+    service: "Mold Assessment",
+  },
+  {
+    quote:
       "A great, attentive company. They came out that week to give us an estimate and scheduled for the next week. They explained the process clearly. I got the results the very next week in an easy to read format. Highly recommended.",
     author: "Paula L.",
     source: "Google",
@@ -243,9 +257,9 @@ export const REVIEWS = [
   {
     quote:
       "From the first contact I had with Tony I knew I had chosen the right company. He was professional, kind, informative and punctual. He took the time to explain the process in detail and put my mind at ease. When they came for treatment he and his crew arrived on time, made sure to cover my carpets to keep them clean and were fast and efficient. They were in and out before I knew it. I would absolutely recommend Restoration Group to anyone needing mold remediation services.",
-    author: "Beth M.",
-    source: "BBB",
-    service: "Commercial / Property Manager",
+    author: "Elizabeth M.",
+    source: "Google & BBB",
+    service: "Mold Remediation",
   },
 ];
 
