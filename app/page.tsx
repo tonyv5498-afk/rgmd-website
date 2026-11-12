@@ -209,7 +209,7 @@ export default function Home() {
                 <div className="review-body">
                   <Stars />
                   <blockquote>“{featured.quote}”</blockquote>
-                  <figcaption>{featured.author} — {featured.source}<span>{featured.service}</span></figcaption>
+                  <figcaption>{featured.author}{featured.source ? ` — ${featured.source}` : ""}<span>{featured.service}</span></figcaption>
                 </div>
               </figure>
             )}
@@ -219,7 +219,7 @@ export default function Home() {
               <figure key={r.author} className="review">
                 <Stars />
                 <blockquote>“{r.quote}”</blockquote>
-                <figcaption>{r.author} — {r.source}<span>{r.service}</span></figcaption>
+                <figcaption>{r.author}{r.source ? ` — ${r.source}` : ""}<span>{r.service}</span></figcaption>
               </figure>
             ))}
           </div>

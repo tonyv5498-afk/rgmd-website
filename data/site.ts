@@ -35,6 +35,41 @@ export const COVERAGE_DISCLAIMER =
 export const REVIEWS = [
   {
     quote:
+      "I had Tony come out to do an assessment after a plumbing service found potential issues in the wall. He was incredibly thorough and detailed and spent a lot of time trying to investigate if and where the pipes were still leaking to give me a honest answer. He had professional camera equipment that was better than other vendors I've used in the past and was able to visually show me where the problem was, and detail the next steps. Very dependable and trustworthy...highly recommended again!",
+    author: "Cheryl D.",
+    source: "Google",
+    service: "Leak Assessment",
+  },
+  {
+    quote:
+      "I've worked with Tony and his crews on multiple homes and they are the best! On time, efficient, and left our properties cleaner than before they started! Highly recommend!",
+    author: "Megan E.",
+    source: "Google",
+    service: "Repeat Client, Multiple Properties",
+  },
+  {
+    quote:
+      "We discovered a hidden water leak in our home and were getting absolutely nowhere with our insurance company. It felt like we were constantly getting the runaround, and nobody wanted to take our concerns seriously.\n\nThankfully, we got Restoration Group involved. Their team came out and performed a thorough inspection using thermal imaging cameras and moisture meters to identify and document the water damage that wasn’t even visible to the naked eye. They took detailed photos, gathered readings, and put together the documentation needed to support our claim.\n\nWhat really stood out was how they advocated for us. When our insurance carrier gave us the cold shoulder, they stepped up, communicated with the adjuster, and made sure our concerns weren’t ignored.",
+    author: "Ashley L.",
+    source: "",
+    service: "Water Damage & Insurance Claim",
+  },
+  {
+    quote:
+      "Our basement flooded, and our insurance company initially only wanted to pay to have the carpet cleaned. We had a professional carpet cleaner come out, but even after the cleaning, there were still noticeable stains and a lingering smell. We knew the carpet wasn’t going to be the same, but we weren’t getting anywhere with our insurance company.\n\nThat’s when we reached out to Restoration Group. They came out, thoroughly inspected the damage, and documented everything to show why simply cleaning the carpet wasn’t enough. They worked with our insurance adjuster and helped us get the claim properly addressed.\n\nThanks to [Restoration Group]’s help, our insurance company ultimately approved replacing all of our basement carpet, padding, and baseboards instead of just cleaning the carpet!",
+    author: "Barb O.",
+    source: "",
+    service: "Basement Flood & Insurance Claim",
+  },
+  {
+    quote:
+      "We had a major kitchen water damage loss, and our insurance company initially only approved around $21,000 for the repairs. We knew that amount wasn’t going to be enough to properly restore our kitchen.\n\nOnce we got Restoration Group involved, everything changed. Their team thoroughly assessed the damage, put together detailed estimates and supporting documentation, and worked directly with our insurance adjuster to make sure the full scope of repairs was accounted for.\n\nThanks to their knowledge and persistence, our insurance company ended up approving over $57,000 for the repairs. [Restoration Group] really went above and beyond to advocate for us and make sure nothing was overlooked. They made a huge difference for us!",
+    author: "Zeonica B.",
+    source: "",
+    service: "Kitchen Water Damage & Insurance Claim",
+  },
+  {
+    quote:
       "In April my basement was flooded with water and sewage after heavy rains. [The RGMD team] arrived and pumped out the water in the basement and his crew removed water damaged [materials]…",
     author: "Gwendolyn M.",
     source: "Yelp",
@@ -49,7 +84,7 @@ export const REVIEWS = [
   },
   {
     quote:
-      "From the first contact I knew I had chosen the right company. He was professional, kind, informative and punctual. He took the time to explain the process in detail and put my mind at ease. When they came for treatment, his crew arrived on time, made sure to cover my carpets to keep them clean, and were fast and efficient. I would absolutely recommend [RGMD] to anyone needing mold remediation services.",
+      "From the first contact I had with Tony I knew I had chosen the right company. He was professional, kind, informative and punctual. He took the time to explain the process in detail and put my mind at ease. When they came for treatment he and his crew arrived on time, made sure to cover my carpets to keep them clean and were fast and efficient. They were in and out before I knew it. I would absolutely recommend Restoration Group to anyone needing mold remediation services.",
     author: "Beth M.",
     source: "BBB",
     service: "Commercial / Property Manager",

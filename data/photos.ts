@@ -8,7 +8,7 @@ export type Project = { title: string; service: string; before: Photo; after: Ph
 export const PHOTOS = {
   waterResponse: { alt: "RGMD crew extracting water and setting drying equipment", label: "Crew on a water job" },
   commercial: { alt: "RGMD crew working in a commercial property", label: "Commercial job" },
-  featuredReview: { alt: "Completed RGMD project", label: "Finished job" },
+  featuredReview: { src: "/images/jobs/basement-bar-mitigation.webp", alt: "Finished basement bar during RGMD water mitigation, with flood cuts in the drywall, the counter wrapped in plastic, and drying equipment running", label: "Basement mitigation", position: "45% 50%" },
 } satisfies Record<string, Photo>;
 
 // Homepage "Recent Projects" before & after pairs.

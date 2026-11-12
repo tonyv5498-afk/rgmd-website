@@ -58,7 +58,6 @@ function CallBtn({ label = SITE.phone, className = "" }: { label?: string; class
 const LP_QUOTES: Record<string, string> = {
   "Gwendolyn M.": "In April my basement was flooded with water and sewage after heavy rains. RGMD arrived and pumped out the water in the basement and their crew removed water-damaged materials…",
   "Wren C.": "We had an EXCELLENT experience with RGMD. They came out very quickly and fixed a mold issue in our attic. I am so grateful!! We even got a warranty to go with the service.",
-  "Beth M.": "From the first contact I knew I had chosen the right company. He was professional, kind, informative and punctual. He took the time to explain the process in detail and put my mind at ease. When they came for treatment, his crew arrived on time, made sure to cover my carpets to keep them clean, and were fast and efficient. I would absolutely recommend RGMD to anyone needing mold remediation services.",
 };
 const LP_REVIEWS = REVIEWS.map((r) => ({ ...r, quote: LP_QUOTES[r.author] ?? r.quote.replace(/\[|\]/g, "") }));
 
@@ -152,7 +151,7 @@ export default async function WaterDamageLP({ searchParams }: Props) {
               <figure key={r.author} className="lp-rev">
                 <Stars />
                 <blockquote>&ldquo;{r.quote}&rdquo;</blockquote>
-                <figcaption><strong>{r.author} · {r.source}</strong><span>{r.service}</span></figcaption>
+                <figcaption><strong>{r.author}{r.source ? ` · ${r.source}` : ""}</strong><span>{r.service}</span></figcaption>
               </figure>
             ))}
           </div>
