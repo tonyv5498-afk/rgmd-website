@@ -34,6 +34,20 @@ export const COVERAGE_DISCLAIMER =
 
 export const REVIEWS = [
   {
+    quote:
+      "A great, attentive company. They came out that week to give us an estimate and scheduled for the next week. They explained the process clearly. I got the results the very next week in an easy to read format. Highly recommended.",
+    author: "Paula L.",
+    source: "Google",
+    service: "Testing & Remediation",
+  },
+  {
+    quote:
+      "Thank you Tony & Matt for taking care of the slight mold problem in my attic. I called them and they were out the same day to test the attic. They laid out their plan and explained everything so I could understand what was going on. Very professional, fair price and just super guys! Thanks again!",
+    author: "D. L.",
+    source: "Google",
+    service: "Attic Mold Remediation",
+  },
+  {
     quote: "Very detail oriented company! Great work as they prepared the job site and got rid of any mold and damage!",
     author: "Kassem E.",
     source: "Google",
