@@ -34,6 +34,19 @@ export const COVERAGE_DISCLAIMER =
 
 export const REVIEWS = [
   {
+    quote: "Used them recently. They did an excellent job and really explained every step to us. Very professional. Would recommend them.",
+    author: "Susan G.",
+    source: "Facebook",
+    service: "Restoration Project",
+  },
+  {
+    quote:
+      "Very dedicated business, they answer right away and provide a very professional service. Gerald and his team were really supportive, understanding and kind. Highly recommend [Restoration Group]!!!",
+    author: "Carolina D.",
+    source: "Facebook",
+    service: "Restoration Project",
+  },
+  {
     quote:
       "Matt and Tony were extremely responsive and informative for a much needed quick resolution for a small fire/smoke repair problem we had at our home. They responded within 30 minutes when we reached out, walked us through their process, offered options and quickly scheduled the service. Their service was fast and effective, and they answered all questions we had. The result has been exactly as we hoped and price was more than fair. We would highly recommend them to anyone needing this service.",
     author: "George R.",
