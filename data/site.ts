@@ -35,6 +35,19 @@ export const COVERAGE_DISCLAIMER =
 export const REVIEWS = [
   {
     quote:
+      "My appraiser suspected mold in the attic. I called [Restoration Group] to see if they came to my area. They did and were out the next day. They did a free sample swipe for mold in my attic. A couple days later they were out within I believe an hour and half the spraying to get rid of it was done. They came back out to get theyre fan for the drying process. I got a green means clean no more mold test done again. Speedy and very informative. I recommend [Restoration Group] for your needs.",
+    author: "Rhonda G.",
+    source: "BBB",
+    service: "Attic Mold Remediation",
+  },
+  {
+    quote: "The team was extremely professional, quick to respond and understanding throughout the duration of our project. Thank you!!",
+    author: "Melanie L.",
+    source: "BBB",
+    service: "Restoration Project",
+  },
+  {
+    quote:
       "I had Tony come out to do an assessment after a plumbing service found potential issues in the wall. He was incredibly thorough and detailed and spent a lot of time trying to investigate if and where the pipes were still leaking to give me a honest answer. He had professional camera equipment that was better than other vendors I've used in the past and was able to visually show me where the problem was, and detail the next steps. Very dependable and trustworthy...highly recommended again!",
     author: "Cheryl D.",
     source: "Google",

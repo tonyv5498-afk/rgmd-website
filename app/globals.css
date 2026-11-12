@@ -395,3 +395,19 @@ legend { font: 700 .8rem/1.2 var(--f-display); text-transform: uppercase; letter
 /* Supporting reviews: masonry columns so long and short reviews pack without gaps */
 .review-layout + .reviews { display: block; columns: 3 300px; column-gap: 24px; }
 .review-layout + .reviews .review { break-inside: avoid; margin-bottom: 24px; }
+
+/* Review carousel */
+.rc { margin-top: 24px; }
+.rc-track { display: flex; align-items: flex-start; gap: 24px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; padding-bottom: 4px; }
+.rc-track::-webkit-scrollbar { display: none; }
+.rc-track:focus-visible { outline: 3px solid var(--mark); outline-offset: 4px; }
+.rc-card { flex: 0 0 calc((100% - 48px) / 3); scroll-snap-align: start; margin: 0; }
+@media (max-width: 1000px) { .rc-card { flex-basis: calc((100% - 24px) / 2); } }
+@media (max-width: 700px) { .rc-card { flex-basis: 88%; } }
+.rc-controls { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+.rc-btn { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); cursor: pointer; transition: background-color .2s var(--ease), color .2s var(--ease); }
+.rc-btn:hover { background: var(--ink); color: #fff; }
+.rc-flip { transform: scaleX(-1); }
+.rc-card blockquote.clamped { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 8; line-clamp: 8; overflow: hidden; white-space: normal; }
+.rc-more { align-self: flex-start; margin: -6px 0 16px; padding: 0; border: 0; background: none; color: var(--dry); font: 700 .95rem var(--f-body); text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
+.rc-card { display: flex; flex-direction: column; }

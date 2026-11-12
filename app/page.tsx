@@ -4,6 +4,7 @@ import { SITE, REVIEWS, HOME_FAQ, WHY_US, WATER_PROCESS, WATER_SITUATIONS, COMME
 import { COUNTY_ORDER, citiesByCounty } from "@/data/cities";
 import { Eyebrow, Steps, ServiceCards, DocsSection, CtaSection, FaqList, CallBand, CallButton, Guarantees } from "@/components/Blocks";
 import MoistureMap from "@/components/MoistureMap";
+import ReviewCarousel from "@/components/ReviewCarousel";
 import { PhotoSlot, BeforeAfter } from "@/components/PhotoSlot";
 import { PHOTOS, PROJECTS } from "@/data/photos";
 import JobPhoto from "@/components/JobPhoto";
@@ -214,15 +215,7 @@ export default function Home() {
               </figure>
             )}
           </div>
-          <div className="reviews">
-            {others.map((r) => (
-              <figure key={r.author} className="review">
-                <Stars />
-                <blockquote>“{r.quote}”</blockquote>
-                <figcaption>{r.author}{r.source ? ` — ${r.source}` : ""}<span>{r.service}</span></figcaption>
-              </figure>
-            ))}
-          </div>
+          <ReviewCarousel reviews={others} />
         </div>
       </section>
 
