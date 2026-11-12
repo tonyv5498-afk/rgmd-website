@@ -7,7 +7,7 @@ export type Project = { title: string; service: string; before: Photo; after: Ph
 
 export const PHOTOS = {
   waterResponse: { src: "/images/jobs/water-stained-drywall.webp", alt: "Water-damaged drywall removed by an RGMD crew, showing tide-line staining from water wicking up the wall", label: "Water-damaged drywall", position: "40% 50%" },
-  commercial: { alt: "RGMD crew working in a commercial property", label: "Commercial job" },
+  commercial: { src: "/images/jobs/commercial-office-extraction.webp", alt: "RGMD technician vacuuming water from an office floor after flood cuts along a commercial wall", label: "Commercial job", position: "45% 55%" },
   featuredReview: { src: "/images/jobs/basement-bar-mitigation.webp", alt: "Finished basement bar during RGMD water mitigation, with flood cuts in the drywall, the counter wrapped in plastic, and drying equipment running", label: "Basement mitigation", position: "45% 50%" },
 } satisfies Record<string, Photo>;
 
