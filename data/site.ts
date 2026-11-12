@@ -35,6 +35,13 @@ export const COVERAGE_DISCLAIMER =
 export const REVIEWS = [
   {
     quote:
+      "I found [Restoration Group] on Angi. I have come to trust the Angi site for excellent recommendations and it did not disappoint. Tony of [Restoration Group] quickly answered my inquiry and came out a few days later. He was friendly and explained the process clearly. He examined the areas where I needed mold mitigation and gave me an estimate. I was happy and surprised that his attic estimate was exactly what the inspector said it would cost. I thought his basement estimate was very reasonable. We established a job date. His arrival was timely and he got right to work. He protected adjacent areas to the work. His partner came to work with him. I inspected the job in the basement and was astonished with how great the basement looked. All traces of mold were gone! He went above and beyond by cleaning some lightly soiled wall panels and my sump pump pipes as well. I am more than pleased with the work done and have no reservation recommending this company. Angi comes through again!",
+    author: "Yvonne V.",
+    source: "Google",
+    service: "Attic & Basement Mold Remediation",
+  },
+  {
+    quote:
       "Tony was very knowledgeable and kind. He inspected my attic and helped me to find the source of were water was getting into my attic that was causing a leak in my ceiling. Tony was able to answer all my questions in kind professional manner. I would definitely recommend Tony and [Restoration Group] to help you find the source of of unwanted leaks in your home and remediation of the damages that leak water can cause.",
     author: "Dave K.",
     source: "Google",
