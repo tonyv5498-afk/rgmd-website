@@ -15,7 +15,7 @@ export function PhotoSlot({ photo, ratio = "4 / 3", sizes = "(max-width: 900px) 
   return (
     <figure className={`photo-slot ${photo.src ? "" : "is-empty"} ${className}`} style={{ aspectRatio: ratio }}>
       {photo.src ? (
-        <Image src={photo.src} alt={photo.alt} fill sizes={sizes} style={{ objectFit: "cover" }} />
+        <Image src={photo.src} alt={photo.alt} fill sizes={sizes} style={{ objectFit: "cover", objectPosition: photo.position ?? "50% 50%" }} />
       ) : (
         <div className="photo-empty"><Camera /><span>Photo coming soon</span></div>
       )}

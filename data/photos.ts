@@ -2,7 +2,7 @@
 // To add a photo: put the image in public/images/jobs/ and set `src` on the matching entry,
 // e.g. src: "/images/jobs/basement-before.webp". Leave `src` out and the spot shows a placeholder.
 
-export type Photo = { src?: string; alt: string; label: string };
+export type Photo = { src?: string; alt: string; label: string; position?: string };
 export type Project = { title: string; service: string; before: Photo; after: Photo };
 
 export const PHOTOS = {
@@ -20,10 +20,10 @@ export const PROJECTS: Project[] = [
     after: { alt: "Basement after drying and repairs", label: "After" },
   },
   {
-    title: "Attic Mold Remediation",
+    title: "Mold Remediation, Under-Stair Framing",
     service: "mold-remediation",
-    before: { alt: "Mold on attic sheathing before remediation", label: "Before" },
-    after: { alt: "Attic sheathing after remediation", label: "After" },
+    before: { src: "/images/jobs/mold-stairs-before.webp", position: "50% 38%", alt: "Mold growth on the wood stair risers under a staircase before remediation", label: "Before" },
+    after: { src: "/images/jobs/mold-stairs-after.webp", position: "50% 38%", alt: "Clean wood stair risers and treads under the same staircase after RGMD mold remediation", label: "After" },
   },
   {
     title: "Water Damage Reconstruction",
@@ -34,7 +34,9 @@ export const PROJECTS: Project[] = [
 ];
 
 // One before & after pair per service page. Services not listed show placeholders.
-export const SERVICE_PROJECTS: Partial<Record<string, Project>> = {};
+export const SERVICE_PROJECTS: Partial<Record<string, Project>> = {
+  "mold-remediation": PROJECTS[1],
+};
 
 export function serviceProject(slug: string, name: string): Project {
   return SERVICE_PROJECTS[slug] ?? {
