@@ -54,12 +54,16 @@ function CallBtn({ label = SITE.phone, className = "" }: { label?: string; class
   );
 }
 
-// Same reviews as data/site.ts, with the editorial brackets removed for this page.
+// This page shows exactly 3 reviews, picked for water damage and fast response.
+// They come from data/site.ts (brackets removed); change the names here to swap them.
+const LP_REVIEW_AUTHORS = ["Gwendolyn M.", "Noe A.", "Brian H."];
 const LP_QUOTES: Record<string, string> = {
   "Gwendolyn M.": "In April my basement was flooded with water and sewage after heavy rains. RGMD arrived and pumped out the water in the basement and their crew removed water-damaged materials…",
-  "Wren C.": "We had an EXCELLENT experience with RGMD. They came out very quickly and fixed a mold issue in our attic. I am so grateful!! We even got a warranty to go with the service.",
 };
-const LP_REVIEWS = REVIEWS.map((r) => ({ ...r, quote: LP_QUOTES[r.author] ?? r.quote.replace(/\[|\]/g, "") }));
+const LP_REVIEWS = LP_REVIEW_AUTHORS
+  .map((name) => REVIEWS.find((r) => r.author === name))
+  .filter((r): r is (typeof REVIEWS)[number] => Boolean(r))
+  .map((r) => ({ ...r, quote: LP_QUOTES[r.author] ?? r.quote.replace(/\[|\]/g, "") }));
 
 type Props = { searchParams: Promise<{ [key: string]: string | string[] | undefined }> };
 
