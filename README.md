@@ -58,3 +58,27 @@ Every photo spot reads from `data/photos.ts`. Put images in `public/images/jobs/
 - `PHOTOS.waterResponse`, `PHOTOS.commercial`, `PHOTOS.featuredReview`: single homepage photos
 - `PROJECTS`: the three homepage before & after pairs
 - `SERVICE_PROJECTS["<service-slug>"]`: the before & after pair on each service page
+
+## CRM leads
+
+Every service request is emailed (EmailJS) **and** filed in the RGMD CRM (Firebase project `rgmd-crm`, collection `webLeads`) at the same time, from `lib/crmLead.ts`. In the CRM they appear under the **Leads** button; **Create Job** turns one into a job and clears it from the list.
+
+The CRM's Firestore rules must let the public website *create* leads (never read, change or delete them). In Firebase console → Firestore Database → Rules, add this block inside `match /databases/{database}/documents { … }` and click Publish:
+
+```
+match /webLeads/{leadId} {
+  allow create: if request.auth == null
+    && request.resource.data.keys().hasOnly(['clientName','phone','email','address','projectType','message','source','reviewed','dismissed','submittedAt'])
+    && request.resource.data.clientName is string && request.resource.data.clientName.size() > 0 && request.resource.data.clientName.size() <= 120
+    && request.resource.data.phone is string && request.resource.data.phone.size() <= 40
+    && request.resource.data.email is string && request.resource.data.email.size() <= 200
+    && request.resource.data.address is string && request.resource.data.address.size() <= 300
+    && request.resource.data.projectType is string && request.resource.data.projectType.size() <= 40
+    && request.resource.data.message is string && request.resource.data.message.size() <= 4000
+    && request.resource.data.source is string && request.resource.data.source.size() <= 80
+    && request.resource.data.reviewed == false
+    && request.resource.data.dismissed == false
+    && request.resource.data.submittedAt == request.time;
+  allow read, update, delete: if request.auth != null;
+}
+```

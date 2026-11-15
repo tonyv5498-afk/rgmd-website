@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import { SITE } from "@/data/site";
 import { EMAILJS } from "@/lib/emailjs";
 import { track } from "@/lib/gtm";
+import { sendLeadToCrm } from "@/lib/crmLead";
 
 const DAMAGE_TYPES = ["Water", "Mold", "Fire", "Odor", "Bat / Rodent", "Other"];
 
@@ -38,26 +39,46 @@ export default function RequestForm({ source = "website", variant = "full" }: { 
     }
 
     const excluded = !!zip && (SITE.excludedZips as readonly string[]).includes(zip);
+    const lead = {
+      name: d.name.trim(),
+      phone: d.phone.trim(),
+      email: d.email?.trim() || "",
+      street: d.street?.trim() || "",
+      city: d.city?.trim() || "",
+      state: d.state?.trim() || "",
+      zip,
+      damageType: d.damageType || "",
+      description: d.description?.trim() || "",
+      source,
+      page: typeof window !== "undefined" ? window.location.href : "",
+      zipNote: excluded ? "NOTE: this ZIP is on the excluded list." : "",
+    };
     try {
-      await emailjs.send(
-        EMAILJS.serviceId,
-        EMAILJS.templateId,
-        {
-          name: d.name.trim(),
-          phone: d.phone.trim(),
-          email: d.email?.trim() || "",
-          street: d.street?.trim() || "",
-          city: d.city?.trim() || "",
-          state: d.state?.trim() || "",
-          zip,
-          damage_type: d.damageType || "Not specified",
-          description: d.description?.trim() || "",
-          source,
-          page: typeof window !== "undefined" ? window.location.href : "",
-          zip_note: excluded ? "NOTE: this ZIP is on the excluded list." : "",
-        },
-        { publicKey: EMAILJS.publicKey },
-      );
+      // Email the lead and file it in the CRM at the same time. Either one landing counts
+      // as success, so a hiccup in one doesn't lose the request.
+      const [mail, crm] = await Promise.allSettled([
+        emailjs.send(
+          EMAILJS.serviceId,
+          EMAILJS.templateId,
+          {
+            name: lead.name,
+            phone: lead.phone,
+            email: lead.email,
+            street: lead.street,
+            city: lead.city,
+            state: lead.state,
+            zip,
+            damage_type: lead.damageType || "Not specified",
+            description: lead.description,
+            source,
+            page: lead.page,
+            zip_note: lead.zipNote,
+          },
+          { publicKey: EMAILJS.publicKey },
+        ),
+        sendLeadToCrm(lead),
+      ]);
+      if (mail.status === "rejected" && crm.status === "rejected") throw new Error("both failed");
       track("form_submit", { form_source: source, damage_type: d.damageType || "Not specified", page_path: window.location.pathname });
       setStatus("sent");
     } catch {
